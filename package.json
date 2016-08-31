@@ -4,7 +4,7 @@
   "description": "Website for pypals.org",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node server.js"
   },
   "author": "Indranil Dutta",
   "license": "ISC",
