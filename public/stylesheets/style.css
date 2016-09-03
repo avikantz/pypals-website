@@ -34,7 +34,7 @@ h1 {
 }
 
 h2 {
-  color: #009246;
+  color: #3C7DA7;
   font-size: 2em;
 }
 
@@ -43,7 +43,7 @@ h3 {
 }
 
 a {
-  color: #CE2B37;
+  color: #646464;
   text-decoration: none;
   border-bottom: 1px solid #eee;
   -webkit-transition: all .2s ease-in-out;
@@ -52,8 +52,8 @@ a {
 }
 
 header {
-  background-color: #009246;
-  color: #FFFFFF;
+  background-color: #3C7DA7;
+  color: #FFC639;
 }
 
 header, section {
@@ -108,19 +108,19 @@ p, pre {
 
 .button:hover, .button:focus {
   outline: none;
-  border: 1px solid rgba(255,0,0,.5);
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 0 10px rgba(255,0,0,.3);
+  border: 1px solid rgba(0,0,255,.5);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 0 10px rgba(0,0,255,.3);
 }
 
 footer p {
   margin: 0;
   font-size: 1em;
-  color: #FFFFFF;
+  color: #FFC639;
   text-shadow: 0 1px 0 #666666;
 }
 
 footer {
-  background-color: #CE2B37;
+  background-color: #3C7DA7;
 }
 
 footer a {
