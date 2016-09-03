@@ -23,6 +23,10 @@ router.get('/website-repo', function(req, res, next) {
     res.redirect('https://github.com/pypals/pypals-website')
 });
 
+router.get('/LUGM', function(req, res, next) {
+	res.redirect('http://www.lugm.xyz')
+});
+
 router.get('/404', function(req, res, next) {
     res.send('not found');
 })
