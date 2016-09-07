@@ -174,10 +174,19 @@ pre {
   max-width: 100%;
 }
 
+img.inline {
+  display: inline;
+  vertical-align: bottom;
+}
+
 .less-great-title h1 {
   font-size: 3.5em;
 }
 
 p {
   font-size: 1.5em;
+}
+
+p.body {
+  text-align: justify;
 }
