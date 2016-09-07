@@ -23,5 +23,5 @@ All code related to the pypals official website, https://www.pypals.org/
 
     $ pip install -r requirements.txt
 
-To start the server, enter `flask app.py` on your terminal and go to localhost:5000 on any web browser.
+To start the server, enter `flask app.py` on your terminal and go to localhost:3000 on any web browser.
 
