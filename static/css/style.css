@@ -66,10 +66,6 @@ p, pre {
   line-height: 1.8em;
 }
 
-li {
-  font-size: 1.2em;
-}
-
 .button {
   border-radius: 5px;
   background: #efefef;
@@ -194,11 +190,3 @@ p {
 p.body {
   text-align: justify;
 }
-
-.navbar {
-   background-color: transparent;
-   background: transparent;
-   border-color: transparent;
-}
-
-.navbar li { color: #000 }
