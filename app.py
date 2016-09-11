@@ -33,6 +33,9 @@ def norm_mupy():
 def mu_pynum():
     return redirect(u'/\u03BCpy')
 
+@app.route("/proposal")
+def proposal():
+    return render_template('proposal.html')
+
 if __name__ == "__main__":
     app.run(port = 3000)
-
