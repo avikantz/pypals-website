@@ -37,5 +37,9 @@ def mu_pynum():
 def proposal():
     return render_template('proposal.html')
 
+@app.route("/conduct")
+def conduct():
+    return render_template('conduct.html')
+
 if __name__ == "__main__":
     app.run(port = 3000)
