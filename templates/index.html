@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="it-IT">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,18 +13,26 @@
   <link rel="icon" href="./static/images/favicon.ico" sizes="16x16 32x32 48x48 64x64"/>
 </head>
 <body>
-  <div align="center">
-
-  </div>
   <div class="container">
+    <div class="row">
+        <ul class="nav nav-pills pull-right red">
+            <li class="active"><a href="/">Home</a>
+            </li>
+            <li style="background-color: transparent"><a href="login">Login</a>
+            </li>
+            <li><a href="signup">Sign up</a>
+            </li>
+        </ul>
+    </div>
     <div class="row text-center">
-      <h1><a href="/"><img src="{{ url_for('static',filename='images/mupy.png') }}"></a></h1>
+      <a href="/"><img src="{{ url_for('static',filename='images/mupy.png') }}"></a>
       <p class="lead">Manipal's Python Developer Conference</p>
       <p>
         <a href="/repo"><i class="fa fa-github fa-4x" style="color: #ddd"></i></a>
       </p>
     </div>
 
+    <br>
     <div class="row">
       <div class="col-md-3">
         <h2>What is it?</h2>

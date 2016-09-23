@@ -202,3 +202,7 @@ p.body {
 }
 
 .navbar li { color: #000 }
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: transparent;
+}
