@@ -79,7 +79,7 @@ def register():
         for i,j in data.iteritems():
             user[i] = data[i]
         user.save()
-        return redirect("/register")
+        return redirect("/")
 
 if __name__ == "__main__":
     app.run(port = 3000)
