@@ -1,5 +1,25 @@
-from flask import Flask, render_template, redirect, request
+#!/usr/bin/python
+from datetime import datetime
+from flask import Flask, render_template, redirect, request, jsonify
+from flask_mongokit import MongoKit, Document
+
 app = Flask(__name__)
+
+class User(Document):
+    __collection__ = 'test'
+    structure = {
+        'name': unicode,
+        'college_id': unicode,
+        'email': unicode,
+        'tshirt_size': unicode,
+        'phone': unicode,
+        'time': datetime,
+    }
+    required_fields = ['name', 'college_id', 'email']
+    default_values = {'time': datetime.now()}
+    use_dot_notation = True
+conn = MongoKit(app)
+conn.register(User)
 
 @app.route("/")
 def main():
@@ -9,17 +29,9 @@ def main():
 def repo():
     return redirect('https://github.com/PyPals')
 
-@app.route("/website-repo")
-def web_repo():
-    return redirect('https://github.com/PyPals/pypals-website')
-
 @app.route(u'/\u03BCpy')
 def mu_py():
     return render_template('index.html')
-
-@app.route("/py")
-def py():
-    return render_template('test.py')
 
 @app.route("/LUGM")
 def lugm():
@@ -41,17 +53,29 @@ def proposal():
 def conduct():
     return render_template('conduct.html')
 
-@app.route('/signup')
-def signup():
-    return render_template('signup.html')
+@app.route('/sabdedobc')
+def curr_reg():
+    collection = conn['test'].registrations
+    a = list(collection.find())
+    return jsonify(str(a))
 
-@app.route('/validateSignup',methods=['POST'])
-def validateSignup():
-    _username = request.form['username']
-    _email = request.form['email']
-    _password = request.form['password']
-    _tshirt_size = request.form['tshirt_size']
-    return redirect('/signup')
+@app.route('/register', methods=['POST', 'GET'])
+def register():
+    if request.method == 'GET':
+        return render_template('register.html')
+    elif request.method == 'POST':
+        data = {}
+        if request.get_json() is None:
+            data = dict(request.form)
+            del data['register-submit']
+            for i,j in data.iteritems():
+                data[i] = data[i][0]
+        collection = conn['test'].registrations
+        user = collection.User()
+        for i,j in data.iteritems():
+            user[i] = data[i]
+        user.save()
+        return redirect("/register")
 
 if __name__ == "__main__":
     app.run(port = 3000)

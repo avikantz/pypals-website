@@ -19,6 +19,9 @@ All code related to the pypals official website, https://www.pypals.org/
 #### flask
     $ sudo pip install flask
 
+#### mongodb
+    Visit https://docs.mongodb.com/manual/installation/
+
 ### **Requirements**
 
     $ pip install -r requirements.txt
