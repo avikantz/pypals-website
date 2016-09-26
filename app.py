@@ -6,7 +6,7 @@ from flask_mongokit import MongoKit, Document
 app = Flask(__name__)
 
 class User(Document):
-    __collection__ = 'test'
+    __collection__ = 'pypals'
     structure = {
         'name': unicode,
         'college_id': unicode,
@@ -55,7 +55,7 @@ def conduct():
 
 @app.route('/sabdedobc')
 def curr_reg():
-    collection = conn['test'].registrations
+    collection = conn['pypals'].registrations
     a = list(collection.find())
     return jsonify(str(a))
 
@@ -70,7 +70,7 @@ def register():
             del data['register-submit']
             for i,j in data.iteritems():
                 data[i] = data[i][0]
-        collection = conn['test'].registrations
+        collection = conn['pypals'].registrations
         user = collection.User()
         for i,j in data.iteritems():
             user[i] = data[i]
