@@ -53,6 +53,10 @@ def proposal():
 def conduct():
     return render_template('conduct.html')
 
+@app.route("/faq")
+def faq():
+    return render_template('faq.html')
+
 @app.route('/sabdedobc')
 def curr_reg():
     collection = conn['pypals'].registrations
