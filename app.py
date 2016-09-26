@@ -10,7 +10,7 @@ recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'
 recaptcha_key = '***REMOVED***'
 
 class User(Document):
-    __collection__ = 'pypals'
+    __collection__ = 'test'
     structure = {
         'name': unicode,
         'college_id': unicode,
@@ -63,7 +63,7 @@ def faq():
 
 @app.route('/sabdedobc')
 def curr_reg():
-    collection = conn['pypals'].registrations
+    collection = conn['test'].registrations
     a = list(collection.find())
     return jsonify(str(a))
 
@@ -79,25 +79,37 @@ def register():
             del data['register-submit']
             for i,j in data.iteritems():
                 data[i] = data[i][0]
+            needed = ''
             try:
                 payload['response'] = data['g-recaptcha-response']
             except Exception:
                 payload['response'] = ''
         payload['secret'] = recaptcha_key
-        # res = requests.post(recaptcha_url, data = payload)
-        # if res.json()['success']:
-        if True:
-            collection = conn['pypals'].registrations
-            # check = {}
-            # check['email'] = {}
-
-            user = collection.User()
-            for i,j in data.iteritems():
-                user[i] = data[i]
-            user.save()
-            return render_template('register.html', success = True)
+        res = requests.post(recaptcha_url, data = payload)
+        print res.json()['success']
+        if res.json()['success']:
+        # if True:
+            collection = conn['test'].registrations
+            query = {}
+            options = []
+            options.append({'email': data['email']})
+            options.append({'college_id': data['college_id']})
+            query['$or'] = options
+            entries = list(collection.find(query))#.count()
+            if len(entries) == 0:
+                del data['g-recaptcha-response']
+                user = collection.User()
+                for i,j in data.iteritems():
+                    user[i] = data[i]
+                user.save()
+                return render_template('register.html', success = True)
+            else:
+                message = "User already registered."
+                return render_template('register.html', success = False, \
+                    message = "User already registered.")
         else:
-            return render_template('register.html', success = False, message = 'Invalid captcha')
+            return render_template('register.html', success = False,\
+             message = 'Invalid captcha')
 
 if __name__ == "__main__":
     app.run(port = 3000)

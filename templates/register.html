@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./static/css/register.css" />
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Montserrat:700|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css' />
   <link rel="icon" href="./static/images/favicon.ico" sizes="16x16 32x32 48x48 64x64"/>
-  <!--script src='https://www.google.com/recaptcha/api.js'></script-->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
   <div class="container">
@@ -33,7 +33,11 @@
       {% if success %}
         <h2>Successfully registered!</h2>
       {% else %}
-        <h2>{{message}}</h2>
+        {%if small %}
+          <h3> {{message}} </h3>
+        {% else %}
+          <h2>{{message}}</h2>
+        {% endif %}
       {% endif %}
     </div>
     </br>
@@ -51,7 +55,7 @@
 					<div class="panel-body" style="overflow: auto">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="register-form" action="/register" method="post" role="form" style="display: block" accept-charset="utf-8">
+								<form id="register_form" action="/register" method="post" role="form" style="display: block" accept-charset="utf-8">
 									<div class="form-group">
 										<input type="text" name="name" id="name" tabindex="1" class="form-control" placeholder="Name" value="">
 									</div>
@@ -73,7 +77,7 @@
                      <option value="XXL">T-Shirt Size: XXL</option>
                    </select>
                   </div>
-                  <!-- <div class="g-recaptcha" data-sitekey="6LfxswcUAAAAAAd2ocvaZ9VSwDxYSBqxgEQHjZKV"></div> -->
+                  <div class="g-recaptcha" data-sitekey="6LfxswcUAAAAAAd2ocvaZ9VSwDxYSBqxgEQHjZKV"></div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
@@ -89,19 +93,6 @@
 			</div>
 		</div>
 	</div>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 text-left">
-          <p>PyPals - Manipal</p>
-        </div>
-        <div class="col-md-9 text-right">
-          <p>Made with ♥ by <a href="http://github.com/jiteshjha">Jitesh Jha</a>.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
