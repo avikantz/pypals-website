@@ -10,7 +10,7 @@ recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'
 recaptcha_key = '***REMOVED***'
 
 class User(Document):
-    __collection__ = 'test'
+    __collection__ = 'pypals'
     structure = {
         'name': unicode,
         'college_id': unicode,
@@ -63,7 +63,7 @@ def faq():
 
 @app.route('/sabdedobc')
 def curr_reg():
-    collection = conn['test'].registrations
+    collection = conn['pypals'].registrations
     a = list(collection.find())
     return jsonify(str(a))
 
@@ -89,7 +89,7 @@ def register():
         print res.json()['success']
         if res.json()['success']:
         # if True:
-            collection = conn['test'].registrations
+            collection = conn['pypals'].registrations
             query = {}
             options = []
             options.append({'email': data['email']})
