@@ -2,8 +2,12 @@
 from datetime import datetime
 from flask import Flask, render_template, redirect, request, jsonify
 from flask_mongokit import MongoKit, Document
+import requests
 
 app = Flask(__name__)
+
+recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'
+recaptcha_key = '***REMOVED***'
 
 class User(Document):
     __collection__ = 'pypals'
@@ -69,17 +73,31 @@ def register():
         return render_template('register.html')
     elif request.method == 'POST':
         data = {}
+        payload = {}
         if request.get_json() is None:
             data = dict(request.form)
             del data['register-submit']
             for i,j in data.iteritems():
                 data[i] = data[i][0]
-        collection = conn['pypals'].registrations
-        user = collection.User()
-        for i,j in data.iteritems():
-            user[i] = data[i]
-        user.save()
-        return redirect("/")
+            try:
+                payload['response'] = data['g-recaptcha-response']
+            except Exception:
+                payload['response'] = ''
+        payload['secret'] = recaptcha_key
+        # res = requests.post(recaptcha_url, data = payload)
+        # if res.json()['success']:
+        if True:
+            collection = conn['pypals'].registrations
+            # check = {}
+            # check['email'] = {}
+
+            user = collection.User()
+            for i,j in data.iteritems():
+                user[i] = data[i]
+            user.save()
+            return render_template('register.html', success = True)
+        else:
+            return render_template('register.html', success = False, message = 'Invalid captcha')
 
 if __name__ == "__main__":
     app.run(port = 3000)
