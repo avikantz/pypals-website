@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000015">
+  <title>PyPals</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./static/css/normalize.css" />
+  <link rel="stylesheet" href="./static/css/style.css" />
+  <script src="https://use.fontawesome.com/f75179928d.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Montserrat:700|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css' />
+  <link rel="icon" href="./static/images/favicon.ico" sizes="16x16 32x32 48x48 64x64"/>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <ul class="nav nav-pills pull-right red">
+            <li><a href="/">Home</a>
+            </li>
+            <li><a href="register">Register</a>
+            </li>
+            <li><a href="conduct">Code of Conduct</a>
+            </li>
+            <li class="active"><a href="faq">FAQ</a>
+            </li>
+        </ul>
+    </div>
+  <div class="navbar-wrapper">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+              <a href="/mupy"><img src="{{ url_for('static',filename='images/mupy_min.png') }}" class="inline"></a>
+            </div>
+        </nav>
+  </div>
+
+  <div class="container">
+    <div class="row text-center">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>What is MUPy?</h3>
+        <p>MUpy is geared to be an unconventional conference where the talks are about interesting projects instead of research papers. Following the much revered and successful style of PyCon, the speakers hail from various ends of the industry to introduce the audience to the versatility, ease of use and power of Python, as they talk about their projects and experience with the language.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Who are the people behind it?</h3>
+        <p>PyPals (Python Users' Group, Manipal) & LUGM (Linux Users' Group, Manipal).</p>
+        <p>We are a bunch of lowly funded, open source oriented, Python loving people.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>I am a first year. I have no idea what you’re talking about. What do I do?</h3>
+        <p>Here is the ELI5 version. You come, sit, listen to grown-ups talk (patronizing? You’re five, you don’t even know what that means) about how they used a particular programming language to make their everyday lives so much more easier. You still have the chance to ask them about it and get to learn more.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>I’m from a non-computer oriented branch. What is in it for me?</h3>
+        <p>Python stopped being just for the Gates a long time ago, its for the Wozniaks as well. A lot of what can be done through MATLAB or LabVIEW can be done on Python or softwares made using Python for <a href="https://az616578.vo.msecnd.net/files/2015/05/14/635672207217133457-1762359024_itsfofreegif.gif">freeee</a>!</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Why is it called MUPy?</h3>
+        <p>Manipal University Python Developer Conference.</p>
+        <p>But don’t worry, its pronounced ‘Mew-Pie’.</p>
+        <p>Why you ask? Here is <a href="https://www.youtube.com/watch?v=oChNHFGdQUA">why</a>.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Why are you doing this?</h3>
+        <p>To introduce Manipal to Python & its related frameworks.</p>
+        <p>Python is like the young (but experienced), hot, talks less (lesser lines of code) and works more type of person of the opposite sex (we are big on gender equality). It’s only a matter of time before you decide to leave your spouse (C, C++, Java) and have a little fun with Python.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h3>I like what you are doing and would like to help out as well. How do I get in touch? </h3>
+        <p>You can contact us at: <a href="mailto:contact@pypals.org">contact@pypals.org.</a></p>
+        <p>The initiation program to become a PyPal is to send the above e-mail ID a Python related joke/comic/pun.</p>
+      </div>
+    </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 text-left">
+          <p>PyPals - Manipal</p>
+        </div>
+        <div class="col-md-9 text-right">
+          <p>Made with ♥ by <a href="http://github.com/jiteshjha">Jitesh Jha</a>.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
