@@ -8,6 +8,7 @@ app = Flask(__name__)
 
 recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'
 recaptcha_key = '***REMOVED***'
+app_key = '***REMOVED***'
 
 class User(Document):
     __collection__ = 'pypals'
@@ -24,6 +25,7 @@ class User(Document):
     use_dot_notation = True
 conn = MongoKit(app)
 conn.register(User)
+
 
 @app.route("/")
 def main():
@@ -67,14 +69,17 @@ def curr_reg():
     a = list(collection.find())
     return jsonify(str(a))
 
+
+
+
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
         return render_template('register.html')
     elif request.method == 'POST':
-        data = {}
+        data = request.get_json()
         payload = {}
-        if request.get_json() is None:
+        if data is None:
             data = dict(request.form)
             del data['register-submit']
             for i,j in data.iteritems():
@@ -82,34 +87,51 @@ def register():
             needed = ''
             try:
                 payload['response'] = data['g-recaptcha-response']
+                del data['g-recaptcha-response']
             except Exception:
                 payload['response'] = ''
-        payload['secret'] = recaptcha_key
-        res = requests.post(recaptcha_url, data = payload)
-        print res.json()['success']
-        if res.json()['success']:
-        # if True:
-            collection = conn['pypals'].registrations
-            query = {}
-            options = []
-            options.append({'email': data['email']})
-            options.append({'college_id': data['college_id']})
-            query['$or'] = options
-            entries = list(collection.find(query))#.count()
-            if len(entries) == 0:
-                del data['g-recaptcha-response']
-                user = collection.User()
-                for i,j in data.iteritems():
-                    user[i] = data[i]
-                user.save()
-                return render_template('register.html', success = True)
+            payload['secret'] = recaptcha_key
+            res = requests.post(recaptcha_url, data = payload)
+            if res.json()['success']:
+                return add_reg(data)
             else:
-                message = "User already registered."
-                return render_template('register.html', success = False, \
-                    message = "User already registered.")
+                return render_template('register.html', success = False,\
+                 message = 'Invalid captcha')
         else:
-            return render_template('register.html', success = False,\
-             message = 'Invalid captcha')
+            if request.headers.get("PyPals-Authorization") != app_key:
+                res = {}
+                res['success'] = 'false'
+                res['error'] = 'invalid source'
+                return jsonify(res)
+            return add_reg(data, True)
+
+def add_reg(data, json = False):
+    data['time'] = datetime.now()
+    res = {}
+    collection = conn['pypals'].registrations
+    query = {}
+    options = []
+    options.append({'email': data['email']})
+    options.append({'college_id': data['college_id']})
+    query['$or'] = options
+    entries = list(collection.find(query))
+    if len(entries) == 0:
+        user = collection.User()
+        for i,j in data.iteritems():
+            user[i] = data[i]
+        user.save()
+        if not json:
+            return render_template('register.html', success = True)
+        res['success'] = 'true'
+    else:
+        message = "User already registered."
+        if not json:
+            return render_template('register.html', success = False, \
+                message = message)
+        res['success'] = 'false'
+        res['error'] = message
+    return jsonify(res)
+
 
 if __name__ == "__main__":
     app.run(port = 3000)
