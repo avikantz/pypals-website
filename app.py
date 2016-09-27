@@ -69,9 +69,6 @@ def curr_reg():
     a = list(collection.find())
     return jsonify(str(a))
 
-
-
-
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
