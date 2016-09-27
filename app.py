@@ -15,6 +15,7 @@ class User(Document):
     structure = {
         'name': unicode,
         'college_id': unicode,
+        'college_name': unicode,
         'email': unicode,
         'tshirt_size': unicode,
         'phone': unicode,
