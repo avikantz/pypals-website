@@ -70,6 +70,15 @@ def curr_reg():
     a = list(collection.find())
     return jsonify(str(a))
 
+@app.route('/sabdedobc/count')
+def total_reg():
+    collection = conn['pypals'].registrations
+    t = len(list(collection.distinct("college_id")))
+    count = {}
+    count['count'] = t
+    return jsonify(count)
+
+
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
