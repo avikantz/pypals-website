@@ -70,14 +70,13 @@ def curr_reg():
     a = list(collection.find())
     return jsonify(str(a))
 
-@app.route('/sabdedobc/count')
+@app.route('/count/')
 def total_reg():
     collection = conn['pypals'].registrations
     t = len(list(collection.distinct("college_id")))
     count = {}
     count['count'] = t
     return jsonify(count)
-
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -91,7 +90,6 @@ def register():
             del data['register-submit']
             for i,j in data.iteritems():
                 data[i] = data[i][0]
-            needed = ''
             try:
                 payload['response'] = data['g-recaptcha-response']
                 del data['g-recaptcha-response']
@@ -110,9 +108,17 @@ def register():
                 res['success'] = 'false'
                 res['error'] = 'invalid source'
                 return jsonify(res)
-            return add_reg(data, True)
+            return add_reg(data, json = True)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 
 def add_reg(data, json = False):
+    """
+    Function to facilitate adding registrations to the database.
+    """
     data['time'] = datetime.now()
     res = {}
     collection = conn['pypals'].registrations
