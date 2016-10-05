@@ -206,3 +206,10 @@ p.body {
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: transparent;
 }
+
+#psf-image {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
