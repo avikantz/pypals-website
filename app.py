@@ -60,6 +60,10 @@ def proposal():
 def conduct():
     return render_template('conduct.html')
 
+@app.route("/team")
+def team():
+    return render_template('team.html')
+
 @app.route("/faq")
 def faq():
     return render_template('faq.html')
