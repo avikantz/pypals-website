@@ -68,6 +68,39 @@ def team():
 def faq():
     return render_template('faq.html')
 
+@app.route("/talk")
+def talk():
+
+    data_dict1 = []
+    key_value1 = {
+        'talk_id': 1,
+        'title': "Helix and Salt: Case study in high volume and distributed python applications",
+        'speaker': "Harambe",
+        'date': "22 Oct, 2016",
+        'begin_time': "1:00PM",
+        'location': "AB5-202"
+    }
+    data_dict1.append(key_value1)
+    data_dict1.append(key_value1)
+    data_dict1.append(key_value1)
+
+    data_dict2 = []
+    key_value2 = {
+        'talk_id': 1,
+        'title': "Helix and Salt: Case study in high volume and distributed python applications",
+        'speaker': "Harambe",
+        'date': "23 Oct, 2016",
+        'begin_time': "1:00PM",
+        'location': "AB5-202"
+    }
+    data_dict2.append(key_value2)
+    data_dict2.append(key_value2)
+    data_dict2.append(key_value2)
+
+    loopdata1 = data_dict1
+    loopdata2 = data_dict2
+    return render_template("talk.html", loopdata1 = loopdata1, loopdata2 = loopdata2)
+
 @app.route('/sabdedobc')
 def curr_reg():
     collection = conn['pypals'].registrations
