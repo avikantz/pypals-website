@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    {% if title %}
+      <title>{{ title }} - PyPals</title>
+    {% else %}
+      <title>PyPals</title>
+    {% endif %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000015">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./static/css/normalize.css" />
+  <link rel="stylesheet" href="./static/css/style.css" />
+  <script src="https://use.fontawesome.com/f75179928d.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Montserrat:700|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css' />
+
+  <link rel="icon" href="./static/images/favicon.ico" sizes="16x16 32x32 48x48 64x64"/>
+
+  {% block headcontent %}
+  {% endblock %}
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <ul class="nav nav-pills pull-right red">
+            <li {% if subtitle == 'MUPy' %} class="active" {% endif %}><a href="/">Home</a>
+            </li>
+            <li {% if request.endpoint == 'register' %} class="active" {% endif %}><a href="register">Register</a>
+            </li>
+            <li {% if request.endpoint == 'proposal' %} class="active" {% endif %}><a href="proposal">Proposal</a>
+            </li>
+            <li {% if request.endpoint == 'talk' %} class="active" {% endif %}><a href="talk">Talks</a>
+            </li>
+            <li {% if request.endpoint == 'conduct' %} class="active" {% endif %}><a href="conduct">Code of Conduct</a>
+            </li>
+            <li {% if request.endpoint == 'faq' %} class="active" {% endif %}><a href="faq">FAQ</a>
+            </li>
+            <li {% if request.endpoint == 'team' %} class="active" {% endif %}><a href="team">Meet the Team</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+
+  {% if subtitle == 'MUPy' %}
+  <div class="row text-center">
+      <a href="/"><img src="{{ url_for('static',filename='images/mupy.png') }}"></a>
+      <p class="lead">Manipal's Python Developer Conference</p>
+      <p>
+        <a href="/repo"><i class="fa fa-github fa-4x" style="color: #ddd"></i></a>
+      </p>
+    </div>
+  {% else %}
+  <div class="navbar-wrapper">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <a href="/mupy"><img src="{{ url_for('static',filename='images/mupy_min.png') }}" class="inline"></a>
+        </div>
+    </nav>
+  </div>
+  {% endif %}
+
+  <div class="container">
+    <div class="row text-center">
+      {% if subtitle %}
+        {% if subtitle != "Team" %}
+          <h2>{{ subtitle }}</h2>
+        {% endif %}
+      {% else %}
+        <h2>MUPy</h2>
+      {% endif %}
+    </div>
+
+    {% block bodycontent %}
+    {% endblock %}
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-left">
+            <p>PyPals - Manipal</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <p>Sponsored by</p>
+            <p><img id="psf-image" src="https://www.python.org/static/img/psf-logo.png"></p>
+          </div>
+          <div class="col-md-4 text-right">
+            <p>Made with ♥ by <a href="http://github.com/PyPals">PyPals</a>.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

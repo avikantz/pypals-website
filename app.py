@@ -39,7 +39,7 @@ def repo():
 
 @app.route(u'/\u03BCpy')
 def mu_py():
-    return render_template('index.html')
+    return render_template('index.html', subtitle="MUPy")
 
 @app.route("/LUGM")
 def lugm():
@@ -55,19 +55,19 @@ def mu_pynum():
 
 @app.route("/proposal")
 def proposal():
-    return render_template('proposal.html')
+    return render_template('proposal.html', subtitle="Call for Proposals")
 
 @app.route("/conduct")
 def conduct():
-    return render_template('conduct.html')
+    return render_template('conduct.html', subtitle="Code of Conduct")
 
 @app.route("/team")
 def team():
-    return render_template('team.html')
+    return render_template('team.html', subtitle="Team")
 
 @app.route("/faq")
 def faq():
-    return render_template('faq.html')
+    return render_template('faq.html', subtitle="Frequently Asked Questions")
 
 @app.route("/schedule")
 def sched():
@@ -92,7 +92,6 @@ def talk():
         time = datetime.strptime(timestamp, "%Y%m%d%H%M")
         datestr = time.strftime("%b %d, %Y")
         timestr = time.strftime("%I:%M %p")
-        print(datestr, timestr);
         dat["begin_time"] = timestr
         dat["date"] = datestr
         if (datestr == "Oct 22, 2016"):
@@ -100,7 +99,9 @@ def talk():
         else:
             day2.append(dat)
 
-    return render_template("talk.html", loopdata1 = day1, loopdata2 = day2)
+    talkdata = [{"day": "Day 1 (Oct 22, 2016)", "data": day1}, {"day": "Day 2 (Oct 23, 2016)", "data": day2}]
+
+    return render_template("talk.html", talkdata=talkdata, subtitle="Talks Schedule")
 
 @app.route('/sabdedobc')
 def curr_reg():
@@ -150,7 +151,7 @@ def register():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return render_template('404.html', title="Not Found"), 404
 
 
 def add_reg(data, json = False):
@@ -172,13 +173,13 @@ def add_reg(data, json = False):
             user[i] = data[i]
         user.save()
         if not json:
-            return render_template('register.html', success = True)
+            return render_template('register.html', success = True, subtitle="Successfully registered.")
         res['success'] = 'true'
     else:
         message = "User already registered."
         if not json:
             return render_template('register.html', success = False, \
-                message = message)
+                message = message, subtitle="Failed.")
         res['success'] = 'false'
         res['error'] = message
     return jsonify(res)
