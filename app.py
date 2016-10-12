@@ -74,42 +74,33 @@ def sched():
     data = ''
     with open('talk.json') as data_file:    
         data = json.load(data_file, strict = False)
-        # data = data_file.read()
     return jsonify(data)
 
 
 @app.route("/talk")
 def talk():
 
-    data_dict1 = []
-    key_value1 = {
-        'talk_id': 1,
-        'title': "Helix and Salt: Case study in high volume and distributed python applications",
-        'speaker': "Harambe",
-        'date': "22 Oct, 2016",
-        'begin_time': "1:00PM",
-        'location': "AB5-202"
-    }
-    data_dict1.append(key_value1)
-    data_dict1.append(key_value1)
-    data_dict1.append(key_value1)
+    data = []
+    with open('talk.json') as data_file:    
+        data = json.load(data_file, strict = False)
 
-    data_dict2 = []
-    key_value2 = {
-        'talk_id': 1,
-        'title': "Helix and Salt: Case study in high volume and distributed python applications",
-        'speaker': "Harambe",
-        'date': "23 Oct, 2016",
-        'begin_time': "1:00PM",
-        'location': "AB5-202"
-    }
-    data_dict2.append(key_value2)
-    data_dict2.append(key_value2)
-    data_dict2.append(key_value2)
+    day1 = []
+    day2 = []
 
-    loopdata1 = data_dict1
-    loopdata2 = data_dict2
-    return render_template("talk.html", loopdata1 = loopdata1, loopdata2 = loopdata2)
+    for dat in data:
+        timestamp = dat["begin_time"]
+        time = datetime.strptime(timestamp, "%Y%m%d%H%M")
+        datestr = time.strftime("%b %d, %Y")
+        timestr = time.strftime("%I:%M %p")
+        print(datestr, timestr);
+        dat["begin_time"] = timestr
+        dat["date"] = datestr
+        if (datestr == "Oct 22, 2016"):
+            day1.append(dat)
+        else:
+            day2.append(dat)
+
+    return render_template("talk.html", loopdata1 = day1, loopdata2 = day2)
 
 @app.route('/sabdedobc')
 def curr_reg():
