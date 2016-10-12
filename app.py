@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import json
 from datetime import datetime
 from flask import Flask, render_template, redirect, request, jsonify
 from flask_mongokit import MongoKit, Document
@@ -67,6 +68,15 @@ def team():
 @app.route("/faq")
 def faq():
     return render_template('faq.html')
+
+@app.route("/schedule")
+def sched():
+    data = ''
+    with open('talk.json') as data_file:    
+        data = json.load(data_file, strict = False)
+        # data = data_file.read()
+    return jsonify(data)
+
 
 @app.route("/talk")
 def talk():
