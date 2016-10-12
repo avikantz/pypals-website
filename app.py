@@ -120,7 +120,7 @@ def total_reg():
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
-        return render_template('register.html')
+        return render_template('register.html', subtitle="Register", title="Register")
     elif request.method == 'POST':
         data = request.get_json()
         payload = {}
@@ -140,7 +140,7 @@ def register():
                 return add_reg(data)
             else:
                 return render_template('register.html', success = False,\
-                 message = 'Invalid captcha')
+                 message = 'Invalid captcha', subtitle="Register", title="Register")
         else:
             if request.headers.get("PyPals-Authorization") != app_key:
                 res = {}

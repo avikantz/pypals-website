@@ -52,25 +52,29 @@
       </p>
     </div>
   {% else %}
-  <div class="navbar-wrapper">
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <a href="/mupy"><img src="{{ url_for('static',filename='images/mupy_min.png') }}" class="inline"></a>
-        </div>
-    </nav>
-  </div>
+    {% if subtitle not in ['Team', 'Register'] %}
+    <div class="navbar-wrapper">
+      <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <a href="/mupy"><img src="{{ url_for('static',filename='images/mupy_min.png') }}" class="inline"></a>
+          </div>
+      </nav>
+    </div>
+    {% endif %}
   {% endif %}
 
-  <div class="container">
+<div class="container">
+{% if subtitle %}
+  {% if subtitle not in ['Team', 'Register'] %}
     <div class="row text-center">
-      {% if subtitle %}
-        {% if subtitle != "Team" %}
-          <h2>{{ subtitle }}</h2>
-        {% endif %}
-      {% else %}
-        <h2>MUPy</h2>
-      {% endif %}
+        <h2>{{ subtitle }}</h2>
     </div>
+  {% endif %}
+{% else %}
+  <div class="row text-center">
+      <h2>{{ subtitle }}</h2>
+  </div>
+{% endif %}
 
     {% block bodycontent %}
     {% endblock %}
