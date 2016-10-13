@@ -72,7 +72,7 @@ def faq():
 @app.route("/schedule")
 def sched():
     data = ''
-    with open('talk.json') as data_file:    
+    with open('talk.json') as data_file:
         data = json.load(data_file, strict = False)
     return jsonify(data)
 
@@ -81,7 +81,7 @@ def sched():
 def talk():
 
     data = []
-    with open('talk.json') as data_file:    
+    with open('talk.json') as data_file:
         data = json.load(data_file, strict = False)
 
     day1 = []
@@ -102,6 +102,31 @@ def talk():
     talkdata = [{"day": "Day 1 (Oct 22, 2016)", "data": day1}, {"day": "Day 2 (Oct 23, 2016)", "data": day2}]
 
     return render_template("talk.html", talkdata=talkdata, subtitle="Talks Schedule")
+
+@app.route("/talk/<talk_id>")
+def talk_detail(talk_id):
+
+    data = []
+    with open('talk.json') as data_file:
+        data = json.load(data_file, strict = False)
+
+    talk_data = {}
+    for datum in data:
+        if talk_id == datum["talk_id"]:
+            talk_data = datum.copy()
+            timestamp = talk_data["begin_time"]
+            time = datetime.strptime(timestamp, "%Y%m%d%H%M")
+            datestr = time.strftime("%b %d, %Y")
+            timestr = time.strftime("%I:%M %p")
+            talk_data["begin_time"] = timestr
+            talk_data["date"] = datestr
+            break
+
+    if not talk_data:
+        return render_template('404.html', title="Not Found"), 404
+    else:
+        talk_title = talk_data["title"]
+    return render_template("talk_detail.html", subtitle = talk_title, details = talk_data)
 
 @app.route('/sabdedobc')
 def curr_reg():
