@@ -41,8 +41,8 @@
   },
   {
     "talk_id": "06",
-    "title": "Raakesh Kumar",
-    "speaker": "Using Django with MongoDB",
+    "title": "Using Django with MongoDB",
+    "speaker": "Raakesh Kumar",
     "begin_time": "201610231100",
     "duration": "35 minutes",
     "location": "N/A"
