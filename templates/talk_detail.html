@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 
-{% block bodycontent %}
+{% block headcontent %}
+
 <link rel="stylesheet" href="{{ url_for('static', filename='css/team.css') }}" />
+
+{% endblock %}
+
+{% block bodycontent %}
+
 <div class="row">
   <br>
   <div class="col-md-6">
@@ -39,9 +45,9 @@
 
 <div class="row">
   <div class="col-md-12">
-    <p>
+    <p style="white-space: pre-wrap;">
       {{ details['description'] }}
-    </p2>
+    </p>
   </div>
 </div>
 

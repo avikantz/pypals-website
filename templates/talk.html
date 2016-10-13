@@ -16,19 +16,19 @@
         <a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item">
             <h3 class="list-group-item-heading text-left"><i class="fa fa-align-left"></i> {{ loop.index }}. {{ item['title'] }}</h3>
             <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-5">
                       <p class="list-group-item-text text-left">
                         <i class="fa fa-user"></i> {{ item['speaker'] }}
                       </p>
                     </div>
 
                     <div class="col-sm-4">
-                      <p class="list-group-item-text text-center">
+                      <p class="list-group-item-text text-left">
                         <i class="fa fa-clock-o"></i> {{ item['begin_time'] }}
                       </p>
                     </div>
-                    <div class="col-sm-4">
-                      <p class="list-group-item-text text-center">
+                    <div class="col-sm-3">
+                      <p class="list-group-item-text text-left">
                         <i class="fa fa-map-marker"></i> {{ item['location'] }}
                       </p>
                     </div>
