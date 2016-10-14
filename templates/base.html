@@ -82,14 +82,14 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 text-left">
+          <div class="col-md-2 text-left">
             <p>PyPals - Manipal</p>
           </div>
-          <div class="col-md-4 text-center">
+          <div class="col-md-8 text-center">
             <p>Sponsored by</p>
-            <p><img id="psf-image" src="https://www.python.org/static/img/psf-logo.png"></p>
+            <p><img id="psf-image" src="{{ url_for('static',filename='images/psf_logo.png') }}"> <img id="psf-image" src="{{ url_for('static',filename='images/pssi_logo.png') }}"> </p>
           </div>
-          <div class="col-md-4 text-right">
+          <div class="col-md-2 text-right">
             <p>Made with ♥ by <a href="http://github.com/PyPals">PyPals</a>.</p>
           </div>
         </div>
