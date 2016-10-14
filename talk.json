@@ -25,7 +25,7 @@
   },
   {
     "talk_id": "03",
-    "title": "PycoIn",
+    "title": "Pycoin",
     "speaker": "Projjol Banerji",
     "linkedin": "https://in.linkedin.com/in/drstm",
     "github": "https://github.com/Projjol",
@@ -35,20 +35,20 @@
     "duration": "35 minutes",
     "location": "N/A"
   },
+  // {
+  //   "talk_id": "04",
+  //   "title": "Keynote",
+  //   "speaker": "N/A",
+  //   "linkedin": "N/A",
+  //   "github": "N/A",
+  //   "image": "https://avatars3.githubusercontent.com/u/15671027?v=3&s=200",
+  //   "description": "N/A",
+  //   "begin_time": "201610230900",
+  //   "duration": "35 minutes",
+  //   "location": "N/A"
+  // },
   {
     "talk_id": "04",
-    "title": "Keynote",
-    "speaker": "N/A",
-    "linkedin": "N/A",
-    "github": "N/A",
-    "image": "https://avatars3.githubusercontent.com/u/15671027?v=3&s=200",
-    "description": "N/A",
-    "begin_time": "201610230900",
-    "duration": "35 minutes",
-    "location": "N/A"
-  },
-  {
-    "talk_id": "05",
     "title": "Deep Learning in NLP - Powered by Python",
     "speaker": "Rishabh Shukla",
     "linkedin": "https://www.linkedin.com/in/rishabhshukla1",
@@ -60,7 +60,7 @@
     "location": "N/A"
   },
   {
-    "talk_id": "06",
+    "talk_id": "05",
     "title": "Using Django with MongoDB",
     "speaker": "Rakesh Kumar",
     "linkedin": "https://www.linkedin.com/in/rakesh-kumar-4b517813",
@@ -72,9 +72,9 @@
     "location": "N/A"
   },
   {
-    "talk_id": "07",
+    "talk_id": "06",
     "title": "Taking ML to production",
-    "speaker": "Aakash Rajpal",
+    "speaker": "Aakash Singh",
     "linkedin": "https://www.linkedin.com/in/aakash-rajpal-177369b5",
     "github": "N/A",
     "image": "https://media.licdn.com/media/AAEAAQAAAAAAAAkcAAAAJDg4OTZhY2JmLTU0NmItNGQyMi1hMmNlLTEyYjZjMmNlNjI5NA.jpg",
@@ -84,7 +84,7 @@
     "location": "N/A"
   },
   {
-    "talk_id": "08",
+    "talk_id": "07",
     "title": "Become a pdb power-user",
     "speaker": "Ashwini Chaudhary",
     "linkedin": "N/A",
@@ -96,7 +96,7 @@
     "location": "N/A"
   },
   {
-    "talk_id": "09",
+    "talk_id": "08",
     "title": "Anomaly Detection",
     "speaker": "Shreya Khurana",
     "linkedin": "https://www.linkedin.com/in/shreya-khurana-36759a86",
@@ -108,7 +108,7 @@
     "location": "N/A"
   },
   {
-    "talk_id": "10",
+    "talk_id": "09",
     "title": "Mission Control in Mars Extraplanetary Python (V)",
     "speaker": "Mario Tambos",
     "linkedin": "https://www.linkedin.com/in/mtambos",
@@ -120,7 +120,7 @@
     "location": "N/A"
   },
   {
-    "talk_id": "11",
+    "talk_id": "10",
     "title": "Machine Learning with Python using scikit-learn",
     "speaker": "Kartik Mandaville",
     "linkedin": "https://www.linkedin.com/in/kar2905",
@@ -132,7 +132,7 @@
     "location": "N/A"
   },
   {
-    "talk_id": "10",
+    "talk_id": "11",
     "title": "Sentiment Analysis using Word2Vec",
     "speaker": "Shubham Goel",
     "linkedin": "https://www.linkedin.com/in/shubhamgoel27",
