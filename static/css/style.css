@@ -94,6 +94,8 @@ li {
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 0 10px rgba(0,0,255,.3);
 }
 
+
+
 footer p {
   margin: 0;
   font-size: 1em;
@@ -196,20 +198,68 @@ p.body {
 }
 
 .navbar {
-   background-color: transparent;
-   background: transparent;
-   border-color: transparent;
+   background-color: #000;
+   border-color: #000;
 }
 
-.navbar li { color: #000 }
+.navbar li { 
+  text-align: right;
+}
+
+.navbar li.active {
+  font-weight: bold;
+  background-color: #343434;
+}
 
 .nav > li > a:hover, .nav > li > a:focus {
-  background-color: transparent;
+  background-color: #444;
 }
 
 #psf-image {
   height: auto;
   width: auto;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 240px;
+  max-height: 80px;
+}
+
+button.navbar-toggle  {
+  border-radius: 0px;
+  background: transparent;
+  border: 0x solid #DDDDDD;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+  padding: 8px 16px;
+  margin-bottom: .5em;
+}
+
+.button:hover, .button:focus {
+  outline: none;
+  border: 1px solid rgba(0,0,255,.5);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 0 10px rgba(0,0,255,.3);
+}
+
+.navbar-toggle .icon-bar:nth-of-type(2) {
+    top: 1px;
+}
+
+.navbar-toggle .icon-bar:nth-of-type(3) {
+    top: 2px;
+}
+
+.navbar-toggle .icon-bar {
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(1) {
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(2) {
+    background-color: transparent;
+}
+
+.navbar-toggle.active .icon-bar:nth-of-type(3) {
+    top: -6px;
+    transform: rotate(-45deg);
 }
