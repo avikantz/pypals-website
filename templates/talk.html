@@ -2,42 +2,36 @@
 
 {% block bodycontent %}
 
-    {% for daydict in talkdata %}
+		{% for daydict in talkdata %}
 
-    <div class="row">
-      <div class="col-md-12">
-        <h3><i class="fa fa-calendar"></i> {{ daydict['day'] }}</h3>
-      </div>
-    </div>
+			<div class="row">
+				<div class="col-md-12">
+					<h3><i class="fa fa-calendar"></i> {{ daydict['day'] }}</h3>
+				</div>
+			</div>
 
-      {% for item in daydict['data'] %}
+			{% for item in daydict['data'] %}
 
-      <div class="list-group">
-        <a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item">
-            <h3 class="list-group-item-heading text-left"><i class="fa fa-align-left"></i> {{ loop.index }}. {{ item['title'] }}</h3>
-            <div class="row">
-                    <div class="col-sm-5">
-                      <p class="list-group-item-text text-left">
-                        <i class="fa fa-user"></i> {{ item['speaker'] }}
-                      </p>
-                    </div>
+				<div class="list-group">
+					<a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item">
+						<h3 class="list-group-item-heading text-left"><i class="fa fa-align-left"></i> {{ loop.index }}. {{ item['title'] }}</h3>
+						<div class="row">
+							<div class="col-sm-5">
+								<p class="list-group-item-text text-left"><i class="fa fa-user"></i> {{ item['speaker'] }}</p>
+							</div>
 
-                    <div class="col-sm-4">
-                      <p class="list-group-item-text text-left">
-                        <i class="fa fa-clock-o"></i> {{ item['begin_time'] }}
-                      </p>
-                    </div>
-                    <div class="col-sm-3">
-                      <p class="list-group-item-text text-left">
-                        <i class="fa fa-map-marker"></i> {{ item['location'] }}
-                      </p>
-                    </div>
-            </div>
-        </a>
-      </div>
+							<div class="col-sm-4">
+								<p class="list-group-item-text text-left"><i class="fa fa-clock-o"></i> {{ item['begin_time'] }}</p>
+							</div>
+							<div class="col-sm-3">
+								<p class="list-group-item-text text-left"><i class="fa fa-map-marker"></i> {{ item['location'] }}</p>
+							</div>
+						</div>
+					</a>
+				</div>
 
-      {% endfor %}
+			{% endfor %}
 
-    {% endfor %}
+		{% endfor %}
 
 {% endblock %}

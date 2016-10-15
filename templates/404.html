@@ -2,32 +2,32 @@
 
 {% block headcontent %}
 
-  <script type="text/javascript">
-  (function () {
-    var timeleft = 3, pause;
-    var timeDec = function () {
-      timeleft--;
-      document.getElementById("countdown").innerHTML = timeleft;
-      if (timeleft == 0) {
-        document.getElementById("countdown").innerHTML = timeleft;
-        clearInterval(pause);
-        window.location = "/";
-      }
-    };
-    pause = setInterval(timeDec, 1000);
+	<script type="text/javascript">
+	(function () {
+		var timeleft = 3, pause;
+		var timeDec = function () {
+			timeleft--;
+			document.getElementById("countdown").innerHTML = timeleft;
+			if (timeleft == 0) {
+				document.getElementById("countdown").innerHTML = timeleft;
+				clearInterval(pause);
+				window.location = "/";
+			}
+		};
+		pause = setInterval(timeDec, 1000);
 
-  })();
-  </script>
+	})();
+	</script>
 
 {% endblock %}
 
 {% block bodycontent %}
 
-  <div class="container">
-    <div class="row text-center">
-      <h2>404! Not Found</h2>
-      <h3>Redirecting in <span id="countdown">3</span></h3>
-    </div>
-  </div>
+	<div class="container">
+		<div class="row text-center">
+			<h2>404! Not Found</h2>
+			<h3>Redirecting in <span id="countdown">3</span></h3>
+		</div>
+	</div>
 
 {% endblock %}

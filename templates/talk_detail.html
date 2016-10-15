@@ -11,43 +11,43 @@
 <div class="row">
   <br>
   <div class="col-md-6">
-      <img src="{{ details['image'] }}" class="img-quadrata center-block" >
-      <h3 class="text-center" >
-        <i class="fa fa-user"></i> {{ details['speaker'] }}
+	  <img src="{{ details['image'] }}" class="img-quadrata center-block" >
+	  <h3 class="text-center" >
+		<i class="fa fa-user"></i> {{ details['speaker'] }}
 
-        <br>
+		<br>
 
-        {% if details['github'] != "N/A" %}
-          <a href="{{ details['github'] }}"><i class="fa fa-github"></i></a>
-        {% endif %}
+		{% if details['github'] != "N/A" %}
+		  <a href="{{ details['github'] }}"><i class="fa fa-github"></i></a>
+		{% endif %}
 
-        {% if details['linkedin'] != "N/A" %}
-          <a href="{{ details['linkedin'] }}"><i class="fa fa-linkedin"></i></a>
-        {% endif %}
-      </h3>
+		{% if details['linkedin'] != "N/A" %}
+		  <a href="{{ details['linkedin'] }}"><i class="fa fa-linkedin"></i></a>
+		{% endif %}
+	  </h3>
   </div>
   <div class="col-md-6 text-center">
-    <h3>
-      <i class="fa fa-map-marker"></i> {{ details['location'] }}
-      <br>
-      <br>
-      <i class="fa fa-calendar"></i> {{ details['date'] }}
-    </h3>
+	<h3>
+	  <i class="fa fa-map-marker"></i> {{ details['location'] }}
+	  <br>
+	  <br>
+	  <i class="fa fa-calendar"></i> {{ details['date'] }}
+	</h3>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12 text-left">
-    <h2 style="color:#7986cb">Description:</h2>
-    <hr>
+	<h2 style="color:#7986cb">Description:</h2>
+	<hr>
   <div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <p style="white-space: pre-wrap;">
-      {{ details['description'] }}
-    </p>
+	<p style="white-space: pre-wrap;">
+	  {{ details['description'] }}
+	</p>
   </div>
 </div>
 
