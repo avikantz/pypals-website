@@ -35,18 +35,6 @@
     "duration": "35 minutes",
     "location": "N/A"
   },
-  // {
-  //   "talk_id": "04",
-  //   "title": "Keynote",
-  //   "speaker": "N/A",
-  //   "linkedin": "N/A",
-  //   "github": "N/A",
-  //   "image": "https://avatars3.githubusercontent.com/u/15671027?v=3&s=200",
-  //   "description": "N/A",
-  //   "begin_time": "201610230900",
-  //   "duration": "35 minutes",
-  //   "location": "N/A"
-  // },
   {
     "talk_id": "04",
     "title": "Deep Learning in NLP - Powered by Python",
