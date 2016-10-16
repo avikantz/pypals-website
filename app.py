@@ -40,7 +40,7 @@ class Attendance(Document):
 
 conn = MongoKit(app)
 conn.register(User)
-# conn.register(Attendance)
+conn.register(Attendance)
 
 
 @app.route("/")
@@ -145,7 +145,10 @@ def talk_detail(talk_id):
 @app.route('/sabdedobc')
 def curr_reg():
 	collection = conn['pypals'].registrations
-	a = list(collection.find())
+	data = list(collection.find())
+	array = []
+	for d in data:
+
 	return jsonify(a)
 
 @app.route('/count/')
@@ -233,12 +236,32 @@ def attendance():
 		return render_template('404.html', subtitle='Bad request'), 400
 	elif request.method == 'POST':
 		if request.headers.get('PyPals-Authorization') == app_key:
-			userid = request.form.get('userid', '') # name + collegeid
+			name = request.form.get('name', '')
+			college_id = request.form.get('college_id', '')
 			eventid = request.form.get('eventid', '')
-
-			return jsonify({ "success": True })
+			collection = conn['pypals'].attendance
+			options = [{'name': name, 'college_id': college_id}]
+			query = {'$or': options}
+			entries = list(collection.find(query))
+			if len(entries) == 0:
+				attend = collection.Attendance()
+				attend['name'] = name
+				attend['college_id'] = college_id
+				attend['talks_attended'] = [str(eventid)]
+				attend.save()
+				return jsonify({ "success": True, "message": "Congratulations on attending your first talk!" })
+			else:
+				attend = collection.findOne(query)
+				ta = attend['talks_attended']
+				if eventid not in ta:
+					ta.append[eventid]
+					attend['talks_attended'] = ta
+					attend.save()
+					return jsonify({ "success": True, "message": "Thank you for attending another talk." })
+				else:
+					return jsonify({ "success": True, "message": "You've already attended this talk." })
+			return jsonify({ "success": False })
 	return "Unauthorized."
-
 
 if __name__ == "__main__":
 	app.run(port = 3000)
