@@ -145,8 +145,8 @@ def talk_detail(talk_id):
 @app.route('/sabdedobc')
 def curr_reg():
 	collection = conn['pypals'].registrations
-	data = list(collection.find())
-	return jsonify(str(a))
+	a = list(collection.find())
+	return jsonify(a)
 
 @app.route('/count/')
 def total_reg():
@@ -227,7 +227,7 @@ def add_reg(data, json = False):
 		res['error'] = message
 	return jsonify(res)
 
-@app.route('/attendance', methods=['GET', 'POST'])
+@app.route('/attendance', methods=['POST', 'GET'])
 def attendance():
 	if request.method == 'GET':
 		return render_template('404.html', subtitle='Bad request'), 400
