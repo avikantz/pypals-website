@@ -26,8 +26,21 @@ class User(Document):
 	required_fields = ['name', 'college_id', 'email']
 	default_values = {'time': datetime.now()}
 	use_dot_notation = True
+
+class Attendance(Document):
+	__collection__ = 'pypals'
+	structure = {
+		'name': unicode,
+		'college_id': unicode,
+		'talks_attended': list
+	}
+	required_fields = ['name', 'college_id', 'talks_attended']
+	default_values = {'talks_attended': []}
+	use_dot_notation = True
+
 conn = MongoKit(app)
 conn.register(User)
+# conn.register(Attendance)
 
 
 @app.route("/")
@@ -72,7 +85,7 @@ def faq():
 
 @app.route("/schedule")
 def sched():
-	data = ''
+	data = []
 	with open('talk.json') as data_file:
 		data = json.load(data_file, strict = False)
 	return jsonify(data)
@@ -133,7 +146,7 @@ def talk_detail(talk_id):
 def curr_reg():
 	collection = conn['pypals'].registrations
 	a = list(collection.find())
-	return jsonify(str(a))
+	return jsonify(a)
 
 @app.route('/count/')
 def total_reg():
@@ -179,6 +192,10 @@ def register():
 def page_not_found(e):
 	return render_template('404.html', title="Not Found"), 404
 
+@app.errorhandler(400)
+def bad_request(e):
+	return render_template('404.html', title="Bad request"), 400
+
 
 def add_reg(data, json = False):
 	"""
@@ -209,6 +226,18 @@ def add_reg(data, json = False):
 		res['success'] = 'false'
 		res['error'] = message
 	return jsonify(res)
+
+@app.route('/attendance', methods=['GET', 'POST'])
+def attendance():
+	if request.method == 'GET':
+		return render_template('404.html', subtitle='Bad request'), 400
+	elif request.method == 'POST':
+		if request.headers.get('PyPals-Authorization') == app_key:
+			userid = request.form.get('userid', '') # name + collegeid
+			eventid = request.form.get('eventid', '')
+
+			return jsonify({ "success": True })
+	return "Unauthorized."
 
 
 if __name__ == "__main__":
