@@ -146,7 +146,16 @@ def talk_detail(talk_id):
 def curr_reg():
 	collection = conn['pypals'].registrations
 	a = list(collection.find())
-	return jsonify(a)
+	dat = []
+	for l in a:
+		d = {}
+		d['name'] = l['name']
+		d['phone'] = l['phone']
+		d['tshirt_size'] = l['tshirt_size']
+		d['email'] = l['email']
+		d['college_id'] = l['college_id']
+		dat.append(d)
+	return jsonify(dat)
 
 @app.route('/count/')
 def total_reg():
