@@ -83,6 +83,10 @@ def team():
 def faq():
 	return render_template('faq.html', subtitle="Frequently Asked Questions")
 
+@app.route("/lightningproposal")
+def lightningproposal():
+	return render_template('lightningproposal.html', subtitle="Lightning Talk CFP")
+
 @app.route("/schedule")
 def sched():
 	data = []
