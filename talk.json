@@ -31,18 +31,18 @@
 	"github": "https://github.com/Projjol",
 	"image": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/09e/2f1/16e87f7.jpg",
 	"description": "Bitcoin is a cryptocurrency that intends to solve the problem of having middle-men in financial transactions or banks. It allows individuals to transfer money to each other without having an intermediary source snooping in on their private transaction. \n\nBitcoin's rebellious notions put aside the real ground breaking tech that has emerged from it is the blockchain. The blockchain is central to the concept of Bitcoin as all transactions that occur over the Bitcoin network are post validation stored in the blockchain. \n\nThe height and longevity of the blockchain for any currency is a testament to the legitimacy of initial transactions. The talk is going to revolve around the central concept of the blockchain and a PoC implementation in Python.",
-	"begin_time": "201610221900",
+	"begin_time": "201610230900",
 	"duration": "35 minutes",
 	"location": "NLH"
   },
   {
 	"talk_id": "04",
-	"title": "Deep Learning in NLP - Powered by Python",
-	"speaker": "Rishabh Shukla",
-	"linkedin": "https://www.linkedin.com/in/rishabhshukla1",
-	"github": "N/A",
-	"image": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAknAAAAJDJiODliYzVjLTNjMGItNGJjYy1iNDY2LTQxMjI2MTgzM2E5OA.jpg",
-	"description": "Neuron is a Natural Language Processing Platform, which provides Deep Learning based NLP models via REST APIs. The objective is to develop a generic platform, in order to provide textual intelligence to developers around the globe.\n\nContents:\n- What we do at Neuron\n\n- A brief intro of Deep Learning and Neural Networks\n\n- Technical Stack we use for Training (Deep) Neural Networks\n\n- How things have evolved in the field of NLP within last few years, and where we stand\n\n- Some fun examples of Recurrent Neural Nets(generating Linux Code, writing Poetry, etc.)\n\n- People and online resources to follow, if you want to dive into Deep Learning\n\n- An Interactive Q&A Session",
+	"title": "Anomaly Detection",
+	"speaker": "Shreya Khurana",
+	"linkedin": "https://www.linkedin.com/in/shreya-khurana-36759a86",
+	"github": "https://github.com/ShreyaKhurana",
+	"image": "https://media.licdn.com/media/AAEAAQAAAAAAAAYVAAAAJGRjZDUxM2IzLTkxYmQtNDYwZi1iYTBhLWY3ZDgwMTAxNjAxMA.jpg",
+	"description": "From constant monitoring of data using Excel and analyzing countless graphs to developing statistical models to automate the whole procedure, we’ve come a long way in our approach to detect anomalies in processes.\n\nEver wondered why a cardiologist spends hours looking a patient’s medical history? Or why banks keep an extremely detailed track of their users’ transactions? Time series data provides an answer to how your regular processes should behave and why in some bizarre cases they do not.\n\nThis talk will be about how machine learning models are now being used to predict when the next anomaly will occur and whether the current data seems to suggest an anomaly that we’ve encountered before, with a special focus on supervised learning.\n\nI will give examples of how this is taken up by various industry sectors and explain how the same algorithms can be applied to sophisticated applications like handwriting and speech recognition. In specific, I will explain how the manufacturing sector uses data science techniques in order to give their processes and products an edge over the others.\n\nThis talk will also explore basic visualization and preliminary data analysis techniques, specific to this context, and you may see some bouts of extreme devotion towards Pandas because well, let’s admit it, that library is GOD.\n\nThe structure of the talk will be as follows:\n\n- Intro to Anomaly Detection + Applications\n- Time series analysis\n- Algorithms currently in use\n- Python libraries used\n- Code demo a. EDA: Basic techniques b. Fault detection\n- Pre-requisites\n\nBasic stats, ML and Python knowledge\nLove for Pandas (the library)",
 	"begin_time": "201610231000",
 	"duration": "35 minutes",
 	"location": "NLH"
@@ -61,16 +61,16 @@
   },
   {
 	"talk_id": "06",
-	"title": "Taking ML to production",
-	"speaker": "Akash Singh",
-	"linkedin": "https://in.linkedin.com/in/akash-singh-a7b23519",
+	"title": "Sentiment Analysis using Word2Vec",
+	"speaker": "Shubham Goel",
+	"linkedin": "https://www.linkedin.com/in/shubhamgoel27",
 	"github": "N/A",
-	"image": "N/A",
-	"description": "N/A",
+	"image": "https://media.licdn.com/media/AAEAAQAAAAAAAAMaAAAAJDdhYmY4ZTBkLTE0ZTktNDVkMS1iMzk2LTIyMmE0NjRiZDZlOQ.jpg",
+	"description": "The talk aims at using Word2Vec, which allows words to be represented in the form of vectors, to help predict the sentiment of a movie review.",
 	"begin_time": "201610231300",
 	"duration": "35 minutes",
 	"location": "NLH"
-  },
+  }
   {
 	"talk_id": "07",
 	"title": "Become a pdb power-user",
@@ -85,18 +85,6 @@
   },
   {
 	"talk_id": "08",
-	"title": "Anomaly Detection",
-	"speaker": "Shreya Khurana",
-	"linkedin": "https://www.linkedin.com/in/shreya-khurana-36759a86",
-	"github": "https://github.com/ShreyaKhurana",
-	"image": "https://media.licdn.com/media/AAEAAQAAAAAAAAYVAAAAJGRjZDUxM2IzLTkxYmQtNDYwZi1iYTBhLWY3ZDgwMTAxNjAxMA.jpg",
-	"description": "From constant monitoring of data using Excel and analyzing countless graphs to developing statistical models to automate the whole procedure, we’ve come a long way in our approach to detect anomalies in processes.\n\nEver wondered why a cardiologist spends hours looking a patient’s medical history? Or why banks keep an extremely detailed track of their users’ transactions? Time series data provides an answer to how your regular processes should behave and why in some bizarre cases they do not.\n\nThis talk will be about how machine learning models are now being used to predict when the next anomaly will occur and whether the current data seems to suggest an anomaly that we’ve encountered before, with a special focus on supervised learning.\n\nI will give examples of how this is taken up by various industry sectors and explain how the same algorithms can be applied to sophisticated applications like handwriting and speech recognition. In specific, I will explain how the manufacturing sector uses data science techniques in order to give their processes and products an edge over the others.\n\nThis talk will also explore basic visualization and preliminary data analysis techniques, specific to this context, and you may see some bouts of extreme devotion towards Pandas because well, let’s admit it, that library is GOD.\n\nThe structure of the talk will be as follows:\n\n- Intro to Anomaly Detection + Applications\n- Time series analysis\n- Algorithms currently in use\n- Python libraries used\n- Code demo a. EDA: Basic techniques b. Fault detection\n- Pre-requisites\n\nBasic stats, ML and Python knowledge\nLove for Pandas (the library)",
-	"begin_time": "201610231400",
-	"duration": "35 minutes",
-	"location": "NLH"
-  },
-  {
-	"talk_id": "09",
 	"title": "Mission Control in Mars - Extraplanetary Python (V)",
 	"speaker": "Mario Tambos",
 	"linkedin": "https://www.linkedin.com/in/mtambos",
@@ -108,25 +96,13 @@
 	"location": "NLH"
   },
   {
-	"talk_id": "10",
+	"talk_id": "09",
 	"title": "Machine Learning with Python using scikit-learn",
 	"speaker": "Kartik Mandaville",
 	"linkedin": "https://www.linkedin.com/in/kar2905",
 	"github": "https://github.com/kar2905",
 	"image": "https://media.licdn.com/media/AAEAAQAAAAAAAANzAAAAJGI1NTJkZWU4LWI1NGItNDQ4MC05NzA0LWE5Njk2MWJmYWMyYQ.jpg",
 	"description": "Topics to be covered in the talk:\n\n- Introduction to ML\n- Problem Setting\n- Supervised and unsupervised\n- Setup for Scikit\n- Loading a dataset\n- Training a model\n- Testing the model on unseen data\n- Classification\n- Regression",
-	"begin_time": "201610231600",
-	"duration": "35 minutes",
-	"location": "NLH"
-  },
-  {
-	"talk_id": "11",
-	"title": "Sentiment Analysis using Word2Vec",
-	"speaker": "Shubham Goel",
-	"linkedin": "https://www.linkedin.com/in/shubhamgoel27",
-	"github": "N/A",
-	"image": "https://media.licdn.com/media/AAEAAQAAAAAAAAMaAAAAJDdhYmY4ZTBkLTE0ZTktNDVkMS1iMzk2LTIyMmE0NjRiZDZlOQ.jpg",
-	"description": "The talk aims at using Word2Vec, which allows words to be represented in the form of vectors, to help predict the sentiment of a movie review.",
 	"begin_time": "201610231600",
 	"duration": "35 minutes",
 	"location": "NLH"
