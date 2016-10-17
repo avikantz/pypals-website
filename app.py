@@ -240,35 +240,47 @@ def add_reg(data, json = False):
 		res['error'] = message
 	return jsonify(res)
 
-@app.route('/attendance', methods=['POST'])
+@app.route('/attendance', methods=['POST', 'GET'])
 def attendance():
-	if request.headers.get('PyPals-Authorization') == app_key:
-		name = request.form.get('name', '')
-		college_id = request.form.get('college_id', '')
-		eventid = request.form.get('eventid', '')
-		collection = conn['pypals'].attendance
-		options = [{'name': name, 'college_id': college_id}]
-		query = {'$or': options}
-		entries = list(collection.find(query))
-		if len(entries) == 0:
-			attend = collection.Attendance()
-			attend['name'] = name
-			attend['college_id'] = college_id
-			attend['talks_attended'] = [str(eventid)]
-			attend.save()
-			return jsonify({ "success": True, "message": "Congratulations on attending your first talk!" })
-		else:
-			attend = collection.findOne(query)
-			ta = attend['talks_attended']
-			if eventid not in ta:
-				ta.append[eventid]
-				attend['talks_attended'] = ta
-				attend.save()
-				return jsonify({ "success": True, "message": "Thank you for attending another talk." })
-			else:
-				return jsonify({ "success": True, "message": "You've already attended this talk." })
-		return jsonify({ "success": False })
-	return "Unauthorized."
+    if request.method == 'GET':
+        return render_template('404.html', subtitle='Bad request'), 400
+    elif request.method == 'POST':
+        if request.headers.get('PyPals-Authorization') == app_key:
+            data = request.get_json()
+            name = data['name']
+            college_id = data['college_id']
+            eventid = data['eventid']
+            collection = conn['pypals'].attendance
+            options = [{'name': name, 'college_id': college_id}]
+            query = {'$or': options}
+            entries = list(collection.find(query))
+            if len(entries) == 0:
+                attend = collection.Attendance()
+                attend['name'] = name
+                attend['college_id'] = college_id
+                attend['talks_attended'] = [str(eventid)]
+                attend.save()
+                return jsonify({ "success": True, "message": "Congratulations on attending your first talk!" })
+            else:
+                cursor = collection.find(query)
+                attend = [doc for doc in cursor][0]
+                ta = attend['talks_attended']
+                print eventid, type(eventid)
+                if eventid not in ta:
+                    ta.append(eventid)
+                    attend['talks_attended'] = ta
+                    collection.update(
+                        {"college_id": college_id},
+                        {
+                        "$set": {
+                            "talks_attended":ta
+                        }
+                        }, upsert=False, multi=False)
+                    return jsonify({ "success": True, "message": "Thank you for attending another talk." })
+                else:
+                    return jsonify({ "success": True, "message": "You've already attended this talk." })
+            return jsonify({ "success": False })
+    return "Unauthorized."
 
 if __name__ == "__main__":
 	app.run(port = 3000)
