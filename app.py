@@ -245,45 +245,69 @@ def attendance():
     if request.method == 'GET':
         return render_template('404.html', subtitle='Bad request'), 400
     elif request.method == 'POST':
-        if request.headers.get('PyPals-Authorization') == app_key:
-			talk_data = []
-				with open('talk.json') as data_file:
-					talk_data = json.load(data_file, strict = False)
+        if request.headers.get('PyPals-Authorization') != app_key:
+        	return "Unauthorised"
+        else:
+			data = request.get_json()
+			name = data['name']
+			college_id = data['college_id']
+			eventid = data['eventid']
 
-            data = request.get_json()
-            name = data['name']
-            college_id = data['college_id']
-            eventid = data['eventid']
-            collection = conn['pypals'].attendance
-            options = [{'name': name, 'college_id': college_id}]
-            query = {'$or': options}
-            entries = list(collection.find(query))
-            if len(entries) == 0:
-                attend = collection.Attendance()
-                attend['name'] = name
-                attend['college_id'] = college_id
-                attend['talks_attended'] = [str(eventid)]
-                attend.save()
-                return jsonify({ "success": True, "message": "Congratulations on attending your first talk!" })
-            else:
-                cursor = collection.find(query)
-                attend = [doc for doc in cursor][0]
-                ta = attend['talks_attended']
-                if eventid not in ta:
-                    ta.append(eventid)
-                    attend['talks_attended'] = ta
-                    collection.update(
-                        {"college_id": college_id},
-                        {
-                        "$set": {
-                            "talks_attended":ta
-                        }
-                        }, upsert=False, multi=False)
-                    return jsonify({ "success": True, "message": "Thank you for attending another talk." })
-                else:
-                    return jsonify({ "success": True, "message": "You've already attended this talk." })
-            return jsonify({ "success": False })
-    return "Unauthorized."
+			talk_data = []
+			with open('talk.json') as data_file:
+				talk_data = json.load(data_file, strict = False)
+
+			talk_time = None
+			for datum in talk_data:
+				if eventid == datum["talk_id"]:
+					talk_data = datum.copy()
+					timestamp = talk_data["begin_time"]
+					talk_time = datetime.strptime(timestamp, "%Y%m%d%H%M")
+			if talk_time is None:
+				return jsonify({"success": False, "message" : "Invalid talk"})
+			else:
+				curr_time = datetime.now()
+				# curr_time = datetime.strptime("201610231406", "%Y%m%d%H%M") #For testing
+				diff = (curr_time - talk_time).total_seconds()
+				print curr_time, talk_time, diff
+				if diff < 0:
+					return jsonify({"success":False, "message":"Talk yet to start"})
+				elif diff > 35 * 60:
+					return jsonify({"success":False, "message": "Talk finished."})
+				else:
+					return add_attendance(name, college_id, eventid)
+
+
+def add_attendance(name, college_id, eventid):
+	collection = conn['pypals'].attendance
+	options = [{'name': name, 'college_id': college_id}]
+	query = {'$or': options}
+	entries = list(collection.find(query))
+
+	if len(entries) == 0:
+		attend = collection.Attendance()
+		attend['name'] = name
+		attend['college_id'] = college_id
+		attend['talks_attended'] = [str(eventid)]
+		attend.save()
+		return jsonify({ "success": True, "message": "Congratulations on attending your first talk!" })
+	else:
+		cursor = collection.find(query)
+		attend = [doc for doc in cursor][0]
+		ta = attend['talks_attended']
+		if eventid not in ta:
+			ta.append(eventid)
+			attend['talks_attended'] = ta
+			collection.update(
+			{"college_id": college_id},
+			{
+			"$set": {
+			    "talks_attended":ta
+			}
+			}, upsert=False, multi=False)
+			return jsonify({ "success": True, "message": "Thank you for attending another talk." })
+		else:
+			return jsonify({ "success": True, "message": "You've already attended this talk." })
 
 if __name__ == "__main__":
 	app.run(port = 3000)
