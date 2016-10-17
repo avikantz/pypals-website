@@ -38,17 +38,28 @@
 
 <div class="row">
   <div class="col-md-12 text-left">
-	<h2 style="color:#7986cb">Description:</h2>
-	<hr>
-  <div>
-</div>
-
-<div class="row">
-  <div class="col-md-12">
+  	<hr>
+	<h2 style="color:#7986cb">Talk description</h2>
 	<p style="white-space: pre-wrap;">
 	  {{ details['description'] }}
 	</p>
   </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 text-left">
+	<hr>
+	<h2 style="color:#7986cb">About the speaker</h2>
+	<p style="white-space: pre-wrap;">
+	  {{ details['about_speaker'] }}
+	</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 text-left">
+	<hr>
+</div>
 </div>
 
 {% endblock %}
