@@ -246,6 +246,10 @@ def attendance():
         return render_template('404.html', subtitle='Bad request'), 400
     elif request.method == 'POST':
         if request.headers.get('PyPals-Authorization') == app_key:
+			talk_data = []
+				with open('talk.json') as data_file:
+					talk_data = json.load(data_file, strict = False)
+
             data = request.get_json()
             name = data['name']
             college_id = data['college_id']
@@ -265,7 +269,6 @@ def attendance():
                 cursor = collection.find(query)
                 attend = [doc for doc in cursor][0]
                 ta = attend['talks_attended']
-                print eventid, type(eventid)
                 if eventid not in ta:
                     ta.append(eventid)
                     attend['talks_attended'] = ta
