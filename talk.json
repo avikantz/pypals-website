@@ -1,6 +1,6 @@
 [
   {
-    "talk_id": "01",
+    "talk_id": "pypals",
     "title": "PyCon 101",
     "speaker": "PyPals",
     "about_speaker": "",
@@ -13,7 +13,7 @@
     "location": "NLH"
   },
   {
-    "talk_id": "02",
+    "talk_id": "rtnpro",
     "title": "The Road to an Open Source contributor (V)",
     "speaker": "Ratnadeep Debnath",
     "about_speaker": "Ratnadeep Debnath, AKA, rtnpro has been contributing to the Open Source community since 2010. Currently, he works as a container engineer at Red Hat and is using Golang in his day job. He has contributed to many Open Source projects including Mozilla, Transifex, Wikimedia and Fedora. He is  the creator and maintainer of Waartaa, an open source communication and collaboration tool for humans.",
@@ -26,7 +26,7 @@
     "location": "NLH"
   },
   {
-    "talk_id": "03",
+    "talk_id": "projjol",
     "title": "Pycoin",
     "speaker": "Projjol Banerji",
     "about_speaker": "Projjol has worked extensively on web platforms and is a regular contributor to the Mozilla Foundation. \nLOTR, Star Wars and FOSS maniac, he loves to build great software | Hack it, ship it.",
@@ -39,7 +39,7 @@
     "location": "NLH"
   },
   {
-    "talk_id": "04",
+    "talk_id": "shreya",
     "title": "Anomaly Detection",
     "speaker": "Shreya Khurana",
     "about_speaker": "A math nerd who's passionate about cricket, she has always had fun playing with numbers - be it the stats of a match scoreboard or the digits on a vehicle number plate. She is a firm believer in the power of data and a big fan of social entrepreneurship. A math and IT grad, she started working as a Data Scientist with EcoZen Solutions a couple of months back.",
@@ -52,7 +52,7 @@
     "location": "NLH"
   },
   {
-    "talk_id": "05",
+    "talk_id": "rakesh",
     "title": "Using Django with MongoDB",
     "speaker": "Rakesh Kumar",
     "about_speaker": "",
@@ -65,7 +65,7 @@
     "location": "NLH"
   },
   {
-    "talk_id": "06",
+    "talk_id": "shubham",
     "title": "Sentiment Analysis using Word2Vec",
     "speaker": "Shubham Goel",
     "about_speaker": "A machine learning enthusiast, Shubham loves playing around with data. He's an ardent Arsenal supporter who in his free time is found binge-watching TV shows or playing football.",
@@ -78,7 +78,7 @@
     "location": "NLH"
   },
   {
-    "talk_id": "07",
+    "talk_id": "ashwch",
     "title": "Become a pdb power-user",
     "speaker": "Ashwini Chaudhary",
     "about_speaker": "Ashwini works at Instamojo as a software engineer. He has been using and contributing to Python for almost over 5 years now. From building a scalable payment system to end-to-end cutting edge applications for Wall Street.\n\nHe currently ranks #1 for Python on Stack Overflow in India! Apart from programming, he loves travelling on his bike and playing FIFA.",
@@ -91,7 +91,7 @@
     "location": "NLH"
   },
   {
-    "talk_id": "08",
+    "talk_id": "mtambos",
     "title": "Mission Control in Mars - Extraplanetary Python (V)",
     "speaker": "Mario Tambos",
     "about_speaker": "Mario is a machine learning enthusiast, who has recently made a change in career from backend development to machine learning and data science.\n\nA veteran developer, he has experience in a wide range of programming languages such as .Net, Java, PHP, C and Perl; in diverse environments like web application development and Service Oriented Architectures.\n\nHe has also had experience in leading teams of developers, using ISO process methodologies, for the Argentinean National Spatial Activities Commission (CONAE), and Scrum, for Teracode BA and Intel, among others.",
@@ -104,7 +104,7 @@
     "location": "NLH"
   },
   {
-    "talk_id": "09",
+    "talk_id": "kar2905",
     "title": "Machine Learning with Python using scikit-learn",
     "speaker": "Kartik Mandaville",
     "about_speaker": "Kartik Mandaville currently works on SpringRole - a machine learning based recruiting agency. He also serves as the Senior Technical Advisor at Science in Santa Monica, California. He graduated from Carnegie Mellon University with Masters from the Language Technologies Institute focusing on Big Data, Machine Learning, NLP and BioTech.\n\nKartik co-founded SpringRole in 2014. SpringRole has a current network of over 85M passive candidates. SpringRole has notable investors backing - Science, Bloomberg Beta and high profile angels.\n\nScience employs a 'studio' model to create, scale, and acquire digital businesses out of our shared space in Santa Monica. As the director of technology, he worked with early stage startups to architecting out their technology, building the team and scaling. He built the Science India team having 25+ software engineers and product working across the portfolio companies.",
