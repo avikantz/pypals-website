@@ -178,6 +178,8 @@ def curr_reg():
 		d['tshirt_size'] = l['tshirt_size']
 		d['email'] = l['email']
 		d['college_id'] = l['college_id']
+		if l.get('college_name') is not None:
+			d['college_name'] = l['college_name']
 		dat.append(d)
 	return jsonify(dat)
 
