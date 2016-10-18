@@ -95,6 +95,26 @@ def sched():
 	return jsonify(data)
 
 
+@app.route("/schedule/<talk_id>")
+def sched_detail(talk_id):
+
+	data = []
+	with open('talk.json') as data_file:
+		data = json.load(data_file, strict = False)
+
+	talk_data = {}
+	for datum in data:
+		if talk_id == datum["talk_id"]:
+			talk_data = datum.copy()
+			timestamp = talk_data["begin_time"]
+			time = datetime.strptime(timestamp, "%Y%m%d%H%M")
+			datestr = time.strftime("%b %d, %Y")
+			timestr = time.strftime("%I:%M %p")
+			talk_data["begin_time"] = timestr
+			talk_data["date"] = datestr
+			break
+	return jsonify(talk_data)
+
 @app.route("/talk")
 def talk():
 
