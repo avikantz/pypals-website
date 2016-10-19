@@ -269,6 +269,28 @@ def add_reg(data, json = False):
         res['error'] = message
     return jsonify(res)
 
+
+@app.route('/checkregistration', methods=['POST'])
+def check_reg(data):
+    data = request.get_json()
+    res = {}
+    collection = conn['pypals'].registrations
+    query = {}
+    options = []
+    options.append({'email': data['email']})
+    options.append({'college_id': data['college_id']})
+    query['$or'] = options
+    entries = list(collection.find(query))
+    if len(entries) == 0:
+        res['isRegistered'] = False
+        res['message'] = "User not registered."
+    else:
+        res['isRegistered'] = True
+        res['message'] = "User already registered."
+    res['success'] = True
+    return jsonify(res)
+
+
 @app.route('/attendance', methods=['POST', 'GET'])
 def attendance():
     if request.headers.get('PyPals-Authorization') != app_key:
