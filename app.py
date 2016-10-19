@@ -271,7 +271,7 @@ def add_reg(data, json = False):
 
 
 @app.route('/checkregistration', methods=['POST'])
-def check_reg(data):
+def check_reg():
     data = request.get_json()
     res = {}
     collection = conn['pypals'].registrations
