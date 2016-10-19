@@ -13,9 +13,17 @@
 			{% for item in daydict['data'] %}
 
 				<div class="list-group">
-					<a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item">
-						<h3 class="list-group-item-heading text-left"><i class="fa fa-align-left"></i> {{ loop.index }}. {{ item['title'] }}</h3>
-						<div class="row">
+
+					{% if item['type'] == 'R' %} 
+							<a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item" style="background-color: #3A5069">
+					{% elif item['type'] == 'V' %}
+							<a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item" style="background-color: #674172">
+					{% else %}
+							<a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item" style="background-color: #1E824C">
+					{% endif %}
+
+						<h3 class="list-group-item-heading text-left" style="color: #fcf9ee"><i class="fa fa-align-left"></i> {{ loop.index }}. {{ item['title'] }}</h3>
+						<div class="row" style="color: #fcf9ee">
 							<div class="col-sm-5">
 								<p class="list-group-item-text text-left"><i class="fa fa-user"></i> {{ item['speaker'] }}</p>
 							</div>
