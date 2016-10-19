@@ -284,6 +284,13 @@ def attendance():
         data = request.get_json()
         name = data['name']
         college_id = data['college_id']
+        registrations = conn['pypals'].registrations
+        query = {}
+        options = []
+        options.append({'college_id':str(college_id)})
+        query['$or'] = options
+        if len(list(registrations.find(query))) < 1:
+        	return jsonify({"success": False,"message":"Unregistered"})
         eventid = data['eventid']
 
         talk_data = []
