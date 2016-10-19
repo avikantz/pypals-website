@@ -94,7 +94,6 @@ def sched():
 		data = json.load(data_file, strict = False)
 	return jsonify(data)
 
-
 @app.route("/schedule/<talk_id>")
 def sched_detail(talk_id):
 
@@ -228,14 +227,6 @@ def register():
 				return jsonify(res)
 			return add_reg(data, json = True)
 
-@app.errorhandler(404)
-def page_not_found(e):
-	return render_template('404.html', title="Not Found"), 404
-
-@app.errorhandler(400)
-def bad_request(e):
-	return render_template('404.html', title="Bad request"), 400
-
 
 def add_reg(data, json = False):
 	"""
@@ -273,7 +264,9 @@ def attendance():
 	if request.method == 'GET':
 		college_id = request.args.get("college_id")
 		if college_id is None:
-			return jsonify({"Invalid args"})
+			res = {}
+			res['message'] = "Invalid args"
+			return jsonify(res)
 		else:
 			collection = conn['pypals'].attendance
 			query = {}
@@ -324,21 +317,17 @@ def attendance():
 @app.route('/attendance/most')
 def most_attendance():
 	min_talk = None
-	if request.args.get('count') is None:
-		min_talk = 7
-	else:
-		min_talk = int(request.args.get('count'))
 	res = []
-	entries = conn['pypals'].attendance.find()
-	for entry in entries:
-		if len(entry['talks_attended']) >= min_talk:
-			info = {}
-			info['name'] = entry['name']
-			info['college_id'] = entry['college_id']
-			info['count'] = len(entry['talks_attended'])
-			res.append(info)
-	return jsonify(res)
-
+	entries = list(conn['pypals'].attendance.find({}, {'_id':0}))
+	entries = sorted(entries, key = lambda k: len(k['talks_attended']), \
+		reverse = True)
+	if request.args.get('count') is None:
+		return jsonify(entries)
+	else:
+		count = int(request.args.get('count'))
+		if count > len(entries):
+			return jsonify(entries)
+		return jsonify(entries[:count])
 
 def add_attendance(name, college_id, eventid):
 	collection = conn['pypals'].attendance
@@ -370,6 +359,15 @@ def add_attendance(name, college_id, eventid):
 			return jsonify({ "success": True, "message": "Thank you for attending another talk." })
 		else:
 			return jsonify({ "success": True, "message": "You've already attended this talk." })
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+	return render_template('404.html', title="Not Found"), 404
+
+@app.errorhandler(400)
+def bad_request(e):
+	return render_template('404.html', title="Bad request"), 400
 
 if __name__ == "__main__":
 	app.run(port = 3000)
