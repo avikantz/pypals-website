@@ -185,6 +185,16 @@ def curr_reg():
         dat.append(d)
     return jsonify(dat)
 
+@app.route('/sabdedobc/<key>/')
+def curr_reg_detail(key):
+    collection = conn['pypals'].registrations
+    a = list(collection.find())
+    key = str(key)
+    dat = []
+    for l in a:
+        dat.append(l.get(key))
+    return jsonify(dat)
+
 @app.route('/count/')
 def total_reg():
     collection = conn['pypals'].registrations
