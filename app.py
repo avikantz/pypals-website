@@ -280,8 +280,11 @@ def attendance():
 			options = []
 			options.append({'college_id':str(college_id)})
 			query['$or'] = options
-			talks_attended = list(collection.find(query))[0]['talks_attended']
-			return jsonify(talks_attended)
+			talks_attended = list(collection.find(query))
+			if len(talks_attended) > 0:
+				return jsonify(talks_attended[0]['talks_attended'])
+			else:
+				return jsonify([])
 	else:
 	    if request.headers.get('PyPals-Authorization') != app_key:
 	    	return "Unauthorised"
