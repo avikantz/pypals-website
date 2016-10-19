@@ -307,6 +307,8 @@ def attendance():
 			if talk_time is None:
 				return jsonify({"success": False, "message" : "Invalid talk"})
 			else:
+				return add_attendance(name, college_id, eventid)
+				"""
 				curr_time = datetime.now()
 				# curr_time = datetime.strptime("201610231336", "%Y%m%d%H%M") #For testing
 				diff = (curr_time - talk_time).total_seconds()
@@ -317,6 +319,7 @@ def attendance():
 					return jsonify({"success":False, "message": "Talk finished."})
 				else:
 					return add_attendance(name, college_id, eventid)
+				"""
 
 @app.route('/attendance/most')
 def most_attendance():
