@@ -137,9 +137,11 @@ def talk():
 		else:
 			day2.append(dat)
 
-	talkdata = [{"day": "Day 1 (Oct 22, 2016)", "data": day1}, {"day": "Day 2 (Oct 23, 2016)", "data": day2}]
+	talkdata = [{"day": "Day 1 (Oct 22, 2016)", "data": day1}, \
+	{"day": "Day 2 (Oct 23, 2016)", "data": day2}]
 
-	return render_template("talk.html", talkdata=talkdata, subtitle="Talks Schedule")
+	return render_template("talk.html", talkdata=talkdata, \
+		subtitle="Talks Schedule")
 
 @app.route("/talk/<talk_id>")
 def talk_detail(talk_id):
@@ -164,7 +166,8 @@ def talk_detail(talk_id):
 		return render_template('404.html', title="Not Found"), 404
 	else:
 		talk_title = talk_data["title"]
-	return render_template("talk_detail.html", subtitle = talk_title, details = talk_data)
+	return render_template("talk_detail.html", subtitle = talk_title, \
+		details = talk_data)
 
 @app.route('/sabdedobc')
 def curr_reg():
@@ -194,7 +197,8 @@ def total_reg():
 @app.route('/register', methods=['POST', 'GET'])
 def register():
 	if request.method == 'GET':
-		return render_template('register.html', subtitle="Register", title="Register")
+		return render_template('register.html', subtitle="Register", \
+			title="Register")
 	elif request.method == 'POST':
 		data = request.get_json()
 		payload = {}
@@ -214,7 +218,8 @@ def register():
 				return add_reg(data)
 			else:
 				return render_template('register.html', success = False,\
-				 message = 'Invalid captcha', subtitle="Register", title="Register")
+				 message = 'Invalid captcha', subtitle="Register", \
+				 title="Register")
 		else:
 			if request.headers.get("PyPals-Authorization") != app_key:
 				res = {}
@@ -251,7 +256,8 @@ def add_reg(data, json = False):
 			user[i] = data[i]
 		user.save()
 		if not json:
-			return render_template('register.html', success = True, subtitle="Successfully registered.")
+			return render_template('register.html', success = True, \
+				subtitle="Successfully registered.")
 		res['success'] = 'true'
 	else:
 		message = "User already registered."
@@ -262,39 +268,70 @@ def add_reg(data, json = False):
 		res['error'] = message
 	return jsonify(res)
 
-@app.route('/attendance', methods=['POST'])
+@app.route('/attendance', methods=['POST', 'GET'])
 def attendance():
-    if request.headers.get('PyPals-Authorization') != app_key:
-    	return "Unauthorised"
-    else:
-		data = request.get_json()
-		name = data['name']
-		college_id = data['college_id']
-		eventid = data['eventid']
-
-		talk_data = []
-		with open('talk.json') as data_file:
-			talk_data = json.load(data_file, strict = False)
-
-		talk_time = None
-		for datum in talk_data:
-			if eventid == datum["talk_id"]:
-				talk_data = datum.copy()
-				timestamp = talk_data["begin_time"]
-				talk_time = datetime.strptime(timestamp, "%Y%m%d%H%M")
-		if talk_time is None:
-			return jsonify({"success": False, "message" : "Invalid talk"})
+	if request.method == 'GET':
+		college_id = request.args.get("college_id")
+		if college_id is None:
+			return jsonify({"Invalid args"})
 		else:
-			curr_time = datetime.now()
-			# curr_time = datetime.strptime("201610231336", "%Y%m%d%H%M") #For testing
-			diff = (curr_time - talk_time).total_seconds()
-			print curr_time, talk_time, diff
-			if diff < 0:
-				return jsonify({"success":False, "message":"Talk yet to start"})
-			elif diff > 35 * 60:
-				return jsonify({"success":False, "message": "Talk finished."})
+			collection = conn['pypals'].attendance
+			query = {}
+			options = []
+			options.append({'college_id':str(college_id)})
+			query['$or'] = options
+			talks_attended = list(collection.find(query))[0]['talks_attended']
+			return jsonify(talks_attended)
+	else:
+	    if request.headers.get('PyPals-Authorization') != app_key:
+	    	return "Unauthorised"
+	    else:
+			data = request.get_json()
+			name = data['name']
+			college_id = data['college_id']
+			eventid = data['eventid']
+
+			talk_data = []
+			with open('talk.json') as data_file:
+				talk_data = json.load(data_file, strict = False)
+
+			talk_time = None
+			for datum in talk_data:
+				if eventid == datum["talk_id"]:
+					talk_data = datum.copy()
+					timestamp = talk_data["begin_time"]
+					talk_time = datetime.strptime(timestamp, "%Y%m%d%H%M")
+			if talk_time is None:
+				return jsonify({"success": False, "message" : "Invalid talk"})
 			else:
-				return add_attendance(name, college_id, eventid)
+				curr_time = datetime.now()
+				# curr_time = datetime.strptime("201610231336", "%Y%m%d%H%M") #For testing
+				diff = (curr_time - talk_time).total_seconds()
+				print curr_time, talk_time, diff
+				if diff < 0:
+					return jsonify({"success":False, "message":"Talk yet to start"})
+				elif diff > 35 * 60:
+					return jsonify({"success":False, "message": "Talk finished."})
+				else:
+					return add_attendance(name, college_id, eventid)
+
+@app.route('/attendance/most')
+def most_attendance():
+	min_talk = None
+	if request.args.get('count') is None:
+		min_talk = 7
+	else:
+		min_talk = int(request.args.get('count'))
+	res = []
+	entries = conn['pypals'].attendance.find()
+	for entry in entries:
+		if len(entry['talks_attended']) >= min_talk:
+			info = {}
+			info['name'] = entry['name']
+			info['college_id'] = entry['college_id']
+			info['count'] = len(entry['talks_attended'])
+			res.append(info)
+	return jsonify(res)
 
 
 def add_attendance(name, college_id, eventid):
