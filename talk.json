@@ -34,7 +34,7 @@
     "github": "https://github.com/Projjol",
     "image": "http://i.imgur.com/3Cv0QjB.jpg",
     "description": "Bitcoin is a cryptocurrency that intends to solve the problem of having middle-men in financial transactions or banks. It allows individuals to transfer money to each other without having an intermediary source snooping in on their private transaction. \n\nBitcoin's rebellious notions put aside the real ground breaking tech that has emerged from it is the blockchain. The blockchain is central to the concept of Bitcoin as all transactions that occur over the Bitcoin network are post validation stored in the blockchain. \n\nThe height and longevity of the blockchain for any currency is a testament to the legitimacy of initial transactions. The talk is going to revolve around the central concept of the blockchain and a PoC implementation in Python.",
-    "begin_time": "201610230900",
+    "begin_time": "201610221900",
     "duration": "35 minutes",
     "location": "NLH"
   },
@@ -65,6 +65,19 @@
     "location": "NLH"
   },
   {
+    "talk_id": "kar2905",
+    "title": "Machine Learning with Python using scikit-learn",
+    "speaker": "Kartik Mandaville",
+    "about_speaker": "Kartik Mandaville currently works on SpringRole - a machine learning based recruiting agency. He also serves as the Senior Technical Advisor at Science in Santa Monica, California. He graduated from Carnegie Mellon University with Masters from the Language Technologies Institute focusing on Big Data, Machine Learning, NLP and BioTech.\n\nKartik co-founded SpringRole in 2014. SpringRole has a current network of over 85M passive candidates. SpringRole has notable investors backing - Science, Bloomberg Beta and high profile angels.\n\nScience employs a 'studio' model to create, scale, and acquire digital businesses out of our shared space in Santa Monica. As the director of technology, he worked with early stage startups to architecting out their technology, building the team and scaling. He built the Science India team having 25+ software engineers and product working across the portfolio companies.",
+    "linkedin": "https://www.linkedin.com/in/kar2905",
+    "github": "https://github.com/kar2905",
+    "image": "http://i.imgur.com/UwNNs8S.jpg",
+    "description": "Topics to be covered in the talk:\n\n- Introduction to ML\n- Problem Setting\n- Supervised and unsupervised\n- Setup for Scikit\n- Loading a dataset\n- Training a model\n- Testing the model on unseen data\n- Classification\n- Regression",
+    "begin_time": "201610231300",
+    "duration": "35 minutes",
+    "location": "NLH"
+  },
+  {
     "talk_id": "shubham",
     "title": "Sentiment Analysis using Word2Vec",
     "speaker": "Shubham Goel",
@@ -73,19 +86,6 @@
     "github": "N/A",
     "image": "http://i.imgur.com/5wzpK4D.jpg",
     "description": "The talk aims at using Word2Vec, which allows words to be represented in the form of vectors, to help predict the sentiment of a movie review.",
-    "begin_time": "201610231300",
-    "duration": "35 minutes",
-    "location": "NLH"
-  },
-  {
-    "talk_id": "ashwch",
-    "title": "Become a pdb power-user",
-    "speaker": "Ashwini Chaudhary",
-    "about_speaker": "Ashwini works at Instamojo as a software engineer. He has been using and contributing to Python for almost over 5 years now. From building a scalable payment system to end-to-end cutting edge applications for Wall Street.\n\nHe currently ranks #1 for Python on Stack Overflow in India! Apart from programming, he loves travelling on his bike and playing FIFA.",
-    "linkedin": "N/A",
-    "github": "https://www.github.com/ashwch",
-    "image": "http://i.imgur.com/xgusmMs.jpg",
-    "description": "This talk focuses on the effective general and power usage of the interactive python debugger.",
     "begin_time": "201610231400",
     "duration": "35 minutes",
     "location": "NLH"
@@ -104,14 +104,14 @@
     "location": "NLH"
   },
   {
-    "talk_id": "kar2905",
-    "title": "Machine Learning with Python using scikit-learn",
-    "speaker": "Kartik Mandaville",
-    "about_speaker": "Kartik Mandaville currently works on SpringRole - a machine learning based recruiting agency. He also serves as the Senior Technical Advisor at Science in Santa Monica, California. He graduated from Carnegie Mellon University with Masters from the Language Technologies Institute focusing on Big Data, Machine Learning, NLP and BioTech.\n\nKartik co-founded SpringRole in 2014. SpringRole has a current network of over 85M passive candidates. SpringRole has notable investors backing - Science, Bloomberg Beta and high profile angels.\n\nScience employs a 'studio' model to create, scale, and acquire digital businesses out of our shared space in Santa Monica. As the director of technology, he worked with early stage startups to architecting out their technology, building the team and scaling. He built the Science India team having 25+ software engineers and product working across the portfolio companies.",
-    "linkedin": "https://www.linkedin.com/in/kar2905",
-    "github": "https://github.com/kar2905",
-    "image": "http://i.imgur.com/UwNNs8S.jpg",
-    "description": "Topics to be covered in the talk:\n\n- Introduction to ML\n- Problem Setting\n- Supervised and unsupervised\n- Setup for Scikit\n- Loading a dataset\n- Training a model\n- Testing the model on unseen data\n- Classification\n- Regression",
+    "talk_id": "ashwch",
+    "title": "Become a pdb power-user",
+    "speaker": "Ashwini Chaudhary",
+    "about_speaker": "Ashwini works at Instamojo as a software engineer. He has been using and contributing to Python for almost over 5 years now. From building a scalable payment system to end-to-end cutting edge applications for Wall Street.\n\nHe currently ranks #1 for Python on Stack Overflow in India! Apart from programming, he loves travelling on his bike and playing FIFA.",
+    "linkedin": "N/A",
+    "github": "https://www.github.com/ashwch",
+    "image": "http://i.imgur.com/xgusmMs.jpg",
+    "description": "This talk focuses on the effective general and power usage of the interactive python debugger.",
     "begin_time": "201610231600",
     "duration": "35 minutes",
     "location": "NLH"
