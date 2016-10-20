@@ -15,7 +15,7 @@
   },
   {
     "talk_id": "rtnpro",
-    "title": "The Road to an Open Source contributor (V)",
+    "title": "The Road to an Open Source contributor",
     "speaker": "Ratnadeep Debnath",
     "about_speaker": "\nRatnadeep Debnath, AKA, rtnpro has been contributing to the Open Source community since 2010. Currently, he works as a container engineer at Red Hat and is using Golang in his day job. He has contributed to many Open Source projects including Mozilla, Transifex, Wikimedia and Fedora. He is  the creator and maintainer of Waartaa, an open source communication and collaboration tool for humans.",
     "begin_time": "201610221900",
@@ -127,7 +127,7 @@
   },
   {
     "talk_id": "mtambos",
-    "title": "Mission Control in Mars - Extraplanetary Python (V)",
+    "title": "Mission Control in Mars - Extraplanetary Python",
     "speaker": "Mario Tambos",
     "about_speaker": "\nMario is a machine learning enthusiast, who has recently made a change in career from backend development to machine learning and data science.\n\nA veteran developer, he has experience in a wide range of programming languages such as .Net, Java, PHP, C and Perl; in diverse environments like web application development and Service Oriented Architectures.\n\nHe has also had experience in leading teams of developers, using ISO process methodologies, for the Argentinean National Spatial Activities Commission (CONAE), and Scrum, for Teracode BA and Intel, among others.",
     "linkedin": "https://www.linkedin.com/in/mtambos",
@@ -137,7 +137,7 @@
     "begin_time": "201610231500",
     "duration": "35 minutes",
     "location": "NLH",
-    "type": "R"
+    "type": "V"
   },
   {
     "talk_id": "rajpal",
