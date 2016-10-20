@@ -56,18 +56,18 @@
     "type": "V"
   },
   {
-    "talk_id": "anand",
-    "title": "TBA",
-    "speaker": "TBA",
+    "talk_id": "pypals",
+    "title": "PyCon 101",
+    "speaker": "PyPals",
     "about_speaker": "N/A",
     "begin_time": "201610231000",
     "linkedin": "N/A",
-    "github": "N/A",
+    "github": "https://github.com/pypals/",
     "image": "N/A",
-    "description": "N/A",
+    "description": "An introduction to PyCon and the style of the conference, this talk by PyPals aims to help you learn the best ways to make the most of MUPy.",
     "duration": "35 minutes",
     "location": "NLH",
-    "type": "V"
+    "type": "R"
   },
   {
     "talk_id": "projjol",
@@ -124,6 +124,20 @@
     "duration": "35 minutes",
     "location": "NLH",
     "type": "R"
+  },
+  {
+    "talk_id": "nimish",
+    "title": "Xcos on web",
+    "speaker": "Nimish Singhal",
+    "about_speaker": "",
+    "linkedin": "N/A",
+    "github": "https://www.github.com/ASP1234",
+    "image": "",
+    "description": "\nThe talk presents a tool that supports design of simulation structures for online laboratories accomplished in SciLab/Xcos environment. For running such simulations, it is necessary to build a block scheme corresponding to a control of virtual or remote device.",
+    "begin_time": "201610231400",
+    "duration": "35 minutes",
+    "location": "NLH",
+    "type": "F"
   },
   {
     "talk_id": "mtambos",
