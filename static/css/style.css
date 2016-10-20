@@ -202,7 +202,7 @@ p.body {
 	 border-color: #000;
 }
 
-.navbar li { 
+.navbar li {
 	text-align: right;
 }
 
@@ -263,3 +263,12 @@ button.navbar-toggle  {
 	top: -6px;
 	transform: rotate(-45deg);
 }
+
+
+.legend { list-style: none; color: white}
+.legend li { float: left; margin-right: 10px; }
+.legend span { border: 1px solid #ccc; float: left; width: 20px; height: 20px; margin: 2px; }
+
+.legend .face_to_face { background-color: #3A5069; }
+.legend .videocon { background-color: #674172; }
+.legend .flash_talk { background-color: #1E824C; }

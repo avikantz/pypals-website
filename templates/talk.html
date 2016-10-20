@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}" />
+
 {% block bodycontent %}
 
 		{% for daydict in talkdata %}
@@ -14,7 +16,7 @@
 
 				<div class="list-group">
 
-					{% if item['type'] == 'R' %} 
+					{% if item['type'] == 'R' %}
 							<a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item" style="background-color: #3A5069">
 					{% elif item['type'] == 'V' %}
 							<a href="{{ url_for('talk_detail', talk_id=item['talk_id']) }}" class="list-group-item" style="background-color: #674172">
@@ -42,20 +44,10 @@
 
 		{% endfor %}
 
-		<div class="row">
-			<div class="col-md-12">
-				<img src="{{ url_for('static',filename='images/legend.png') }}"/>
-			</div>
-		</div>
-<!-- 
-		<br/>
-		<div class="row">
-			<div class="col-md-1" style="background-color: #3A5069; width: 32px; height: 32px;"></div>
-			<div class="col-md-3 text-left" style="color: white;"><p>Face to Face</p></div>
-			<div class="col-md-1" style="background-color: #674172; width: 32px; height: 32px;"></div>
-			<div class="col-md-3 text-left" style="color: white;"><p>Videocon</p></div>
-			<div class="col-md-1" style="background-color: #1E824C; width: 32px; height: 32px;"></div>
-			<div class="col-md-3 text-left" style="color: white;"><p>Flash Talk</p></div>
-		</div> -->
+		<ul class="legend">
+	    <li><span class="face_to_face"></span> Face to Face</li>
+	    <li><span class="videocon"></span> Videocon</li>
+	    <li><span class="flash_talk"></span> Flash Talk</li>
+		</ul>
 
 {% endblock %}
