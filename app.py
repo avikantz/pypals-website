@@ -67,6 +67,10 @@ def norm_mupy():
 def mu_pynum():
     return redirect(u'/\u03BCpy')
 
+@app.route("/snake-charming")
+def challenge():
+    return redirect(u'https://www.hackerearth.com/mupy')
+
 @app.route("/proposal")
 def proposal():
     return render_template('proposal.html', subtitle="Call for Proposals")
