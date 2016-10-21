@@ -352,8 +352,8 @@ def attendance():
             print curr_time, talk_time, diff
             if diff < 0:
                 return jsonify({"success":False, "message":"Talk yet to start"})
-            elif diff > 5 * 60:
-                return jsonify({"success":False, "message": "Talk finished."})
+            elif diff > 90:
+                return jsonify({"success":False, "message": "Haha, fuck you."})
             else:
                 return add_attendance(name, college_id, eventid)
 
