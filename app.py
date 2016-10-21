@@ -91,6 +91,10 @@ def faq():
 def lightningproposal():
     return render_template('lightningproposal.html', subtitle="Lightning Talk CFP")
 
+@app.route("/windows")
+def windows():
+    return redirect('http://i0.kym-cdn.com/photos/images/original/000/232/114/e39.png')
+
 @app.route("/schedule")
 def sched():
     data = []
@@ -342,19 +346,16 @@ def attendance():
         if talk_time is None:
             return jsonify({"success": False, "message" : "Invalid talk"})
         else:
-            return add_attendance(name, college_id, eventid)
-            """
             curr_time = datetime.now()
             # curr_time = datetime.strptime("201610231336", "%Y%m%d%H%M") #For testing
             diff = (curr_time - talk_time).total_seconds()
             print curr_time, talk_time, diff
             if diff < 0:
                 return jsonify({"success":False, "message":"Talk yet to start"})
-            elif diff > 35 * 60:
+            elif diff > 5 * 60:
                 return jsonify({"success":False, "message": "Talk finished."})
             else:
                 return add_attendance(name, college_id, eventid)
-            """
 
 @app.route('/attendance/most')
 def most_attendance():
