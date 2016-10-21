@@ -42,29 +42,15 @@
     "type": "F"
   },
   {
-    "talk_id": "hettinger",
-    "title": "TBA",
-    "speaker": "TBA",
-    "about_speaker": "N/A",
-    "begin_time": "201610230900",
-    "linkedin": "N/A",
+    "talk_id": "shubham",
+    "title": "Sentiment Analysis using Word2Vec",
+    "speaker": "Shubham Goel",
+    "about_speaker": "\nA machine learning enthusiast, Shubham loves playing around with data. He's an ardent Arsenal supporter who in his free time is found binge-watching TV shows or playing football.",
+    "linkedin": "https://www.linkedin.com/in/shubhamgoel27",
     "github": "N/A",
-    "image": "N/A",
-    "description": "N/A",
-    "duration": "35 minutes",
-    "location": "NLH",
-    "type": "V"
-  },
-  {
-    "talk_id": "pypals",
-    "title": "PyCon 101",
-    "speaker": "PyPals",
-    "about_speaker": "N/A",
+    "image": "http://i.imgur.com/5wzpK4D.jpg",
+    "description": "\nThe talk aims at using Word2Vec, which allows words to be represented in the form of vectors, to help predict the sentiment of a movie review.",
     "begin_time": "201610231000",
-    "linkedin": "N/A",
-    "github": "https://github.com/pypals/",
-    "image": "N/A",
-    "description": "An introduction to PyCon and the style of the conference, this talk by PyPals aims to help you learn the best ways to make the most of MUPy.",
     "duration": "35 minutes",
     "location": "NLH",
     "type": "R"
@@ -166,20 +152,6 @@
     "duration": "35 minutes",
     "location": "NLH",
     "type": "F"
-  },
-  {
-    "talk_id": "shubham",
-    "title": "Sentiment Analysis using Word2Vec",
-    "speaker": "Shubham Goel",
-    "about_speaker": "\nA machine learning enthusiast, Shubham loves playing around with data. He's an ardent Arsenal supporter who in his free time is found binge-watching TV shows or playing football.",
-    "linkedin": "https://www.linkedin.com/in/shubhamgoel27",
-    "github": "N/A",
-    "image": "http://i.imgur.com/5wzpK4D.jpg",
-    "description": "\nThe talk aims at using Word2Vec, which allows words to be represented in the form of vectors, to help predict the sentiment of a movie review.",
-    "begin_time": "201610231600",
-    "duration": "35 minutes",
-    "location": "NLH",
-    "type": "R"
   },
   {
     "talk_id": "kar2905cmu",
