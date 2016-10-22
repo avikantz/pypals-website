@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import Flask, render_template, redirect, request, jsonify
 from flask_mongokit import MongoKit, Document
 import requests
@@ -343,6 +343,7 @@ def attendance():
                 talk_data = datum.copy()
                 timestamp = talk_data["begin_time"]
                 talk_time = datetime.strptime(timestamp, "%Y%m%d%H%M")
+                talk_time += timedelta(minutes = 10)
         if talk_time is None:
             return jsonify({"success": False, "message" : "Invalid talk"})
         else:
