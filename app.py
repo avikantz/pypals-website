@@ -352,7 +352,7 @@ def attendance():
             diff = (curr_time - talk_time).total_seconds()
             print curr_time, talk_time, diff
             if diff < 0:
-                return jsonify({"success":False, "message": "Talk yet to start".})
+                return jsonify({"success":False, "message": "Talk yet to start."})
             elif diff > 120:
                 return jsonify({"success":False, "message": "Sorry Bruh! You couldn't make it."})
             else:
