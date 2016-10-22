@@ -343,7 +343,7 @@ def attendance():
                 talk_data = datum.copy()
                 timestamp = talk_data["begin_time"]
                 talk_time = datetime.strptime(timestamp, "%Y%m%d%H%M")
-                talk_time += timedelta(minutes = 10)
+                talk_time += timedelta(minutes = 45)
         if talk_time is None:
             return jsonify({"success": False, "message" : "Invalid talk"})
         else:
@@ -354,10 +354,18 @@ def attendance():
             print curr_time, talk_time, diff
             if diff < 0:
                 return jsonify({"success":False, "message": "Talk yet to start."})
-            elif diff > 120:
+            elif diff > 300:
                 return jsonify({"success":False, "message": "Sorry Bruh! You couldn't make it."})
             else:
                 return add_attendance(name, college_id, eventid)
+
+@app.route('/android')
+def android():
+    return redirect("https://play.google.com/store/apps/details?id=lugmanipal.mupy")
+
+@app.route('/ios')
+def ios():
+    return redirect("https://appsto.re/in/cAEifb.i")
 
 @app.route('/attendance/most')
 def most_attendance():
