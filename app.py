@@ -349,12 +349,13 @@ def attendance():
         else:
             curr_time = datetime.now()
             # curr_time = datetime.strptime("201610231336", "%Y%m%d%H%M") #For testing
+            # Move this registration window to something in the middle of the talk, as decided.
             diff = (curr_time - talk_time).total_seconds()
             print curr_time, talk_time, diff
             if diff < 0:
-                return jsonify({"success":False, "message":"Talk yet to start"})
-            elif diff > 90:
-                return jsonify({"success":False, "message": "Haha, fuck you."})
+                return jsonify({"success":False, "message": "Talk yet to start."})
+            elif diff > 120:
+                return jsonify({"success":False, "message": "Sorry Bruh! You couldn't make it."})
             else:
                 return add_attendance(name, college_id, eventid)
 
