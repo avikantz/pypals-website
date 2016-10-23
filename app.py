@@ -370,22 +370,20 @@ def ios():
 
 @app.route('/attendance/most')
 def most_attendance():
-	res = []
-	return jsonify(res)
-    # if request.headers.get('PyPals-Authorization') != app_key:
-    #         return "Unauthorised"
-    # min_talk = None
-    # res = []
-    # entries = list(conn['pypals'].attendance.find({}, {'_id':0}))
-    # entries = sorted(entries, key = lambda k: len(k['talks_attended']), \
-    #     reverse = True)
-    # if request.args.get('count') is None:
-    #     return jsonify(entries)
-    # else:
-    #     count = int(request.args.get('count'))
-    #     if count > len(entries):
-    #         return jsonify(entries)
-    #     return jsonify(entries[:count])
+    if request.headers.get('PyPals-Authorization') != app_key:
+            return "Unauthorised"
+    min_talk = None
+    res = []
+    entries = list(conn['pypals'].attendance.find({}, {'_id':0}))
+    entries = sorted(entries, key = lambda k: len(k['talks_attended']), \
+        reverse = True)
+    if request.args.get('count') is None:
+        return jsonify(entries)
+    else:
+        count = int(request.args.get('count'))
+        if count > len(entries):
+            return jsonify(entries)
+        return jsonify(entries[:count])
 
 def add_attendance(name, college_id, eventid):
     collection = conn['pypals'].attendance
