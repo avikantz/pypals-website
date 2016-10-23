@@ -64,7 +64,7 @@
     "github": "N/A",
     "image": "http://i.imgur.com/5wzpK4D.jpg",
     "description": "The talk aims at using Word2Vec, which allows words to be represented in the form of vectors, to help predict the sentiment of a movie review.",
-    "begin_time": "201610231000",
+    "begin_time": "201610231600",
     "duration": "35 minutes",
     "location": "NLH",
     "type": "R"
