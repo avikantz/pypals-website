@@ -49,7 +49,6 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li {% if subtitle == 'MUPy' %} class="active" {% endif %}><a href="/">Home</a></li>
-					<li {% if request.endpoint == 'register' %} class="active" {% endif %}><a href="{{ url_for('register') }}">Register</a></li>
 					<li {% if request.endpoint == 'proposal' %} class="active" {% endif %}><a href="{{ url_for('proposal') }}">Proposal</a></li>
 					<li {% if request.endpoint == 'lightningproposal' %} class="active" {% endif %}><a href="{{ url_for('lightningproposal') }}">Lightning Talk CFP</a></li>
 					<li {% if request.endpoint == 'talk' %} class="active" {% endif %}><a href="{{ url_for('talk') }}">Talks</a></li>
