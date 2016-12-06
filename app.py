@@ -102,6 +102,13 @@ def sched():
         data = json.load(data_file, strict = False)
     return jsonify(data)
 
+@app.route("/gallery")
+def gallery():
+    data = []
+    with open('photos.json') as photos_data:
+        data = json.load(photos_data)
+    return render_template('photos.html', photos=data, subtitle="Gallery", title="Gallery")
+
 @app.route("/schedule/<talk_id>")
 def sched_detail(talk_id):
 
