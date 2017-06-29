@@ -49,12 +49,13 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li {% if subtitle == 'MUPy' %} class="active" {% endif %}><a href="/">Home</a></li>
-					<li {% if request.endpoint == 'gallery' %} class="active" {% endif %}><a href="{{ url_for('gallery') }}">Gallery</a></li>
-					<!-- <li {% if request.endpoint == 'proposal' %} class="active" {% endif %}><a href="{{ url_for('proposal') }}">Proposal</a></li> -->
+					<!-- <li {% if request.endpoint == 'register' %} class="active" {% endif %}><a href="{{ url_for('register') }}">Register</a></li> -->
+					<li {% if request.endpoint == 'proposal' %} class="active" {% endif %}><a href="{{ url_for('proposal') }}">Proposal</a></li>
 					<!-- <li {% if request.endpoint == 'lightningproposal' %} class="active" {% endif %}><a href="{{ url_for('lightningproposal') }}">Lightning Talk CFP</a></li> -->
-					<li {% if request.endpoint == 'talk' %} class="active" {% endif %}><a href="{{ url_for('talk') }}">Talks</a></li>
+					<!-- <li {% if request.endpoint == 'talk' %} class="active" {% endif %}><a href="{{ url_for('talk') }}">Talks</a></li> -->
 					<li {% if request.endpoint == 'conduct' %} class="active" {% endif %}><a href="{{ url_for('conduct') }}">Code of Conduct</a></li>
 					<li {% if request.endpoint == 'faq' %} class="active" {% endif %}><a href="{{ url_for('faq') }}">FAQ</a></li>
+					<li {% if request.endpoint == 'gallery' %} class="active" {% endif %}><a href="{{ url_for('gallery') }}">Gallery</a></li>
 					<li {% if request.endpoint == 'team' %} class="active" {% endif %}><a href="{{ url_for('team') }}">Meet the Team</a></li>
 				</ul>
 			</div>
@@ -84,7 +85,7 @@
 				{% endif %}
 			{% else %}
 				<div class="row text-center">
-					<h2>MUPy 2016</h2>
+					<h2>MUPy 2017</h2>
 				</div>
 			{% endif %}
 

@@ -218,7 +218,7 @@ def total_reg():
     count['count'] = t
     return jsonify(count)
 
-# @app.route('/register', methods=['POST', 'GET'])
+@app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
         return render_template('register.html', subtitle="Register", \
