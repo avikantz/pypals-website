@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block headcontent %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/photos.css') }}" />
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.poptrox.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+<script src="{{ url_for('static', filename='js/photos.js') }}"></script>
+
+{% endblock %}
+
+{% block bodycontent %}
+
+	<div id="main">
+
+		{% for photo in photos %}
+			<article class="thumb">
+				<a href="{{ url_for('static', filename='mupy16/fulls/%s' %photo.image) }}" class="image">
+					<img src="{{ url_for('static', filename='mupy16/thumbs/%s' %photo.image) }}" alt="" />
+				</a>
+				<h2>{{ photo.title }}</h2>
+			</article>
+		{% endfor %}
+
+	</div>
+
+	<hr/>
+	<br/>
+
+{% endblock %}

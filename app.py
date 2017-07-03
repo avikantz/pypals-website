@@ -433,4 +433,4 @@ def bad_request(e):
     return render_template('404.html', title="Bad request"), 400
 
 if __name__ == "__main__":
-    app.run(port = 3000)
+    app.run(port = 3000, debug=True)

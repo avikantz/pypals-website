@@ -12,6 +12,10 @@ h1, h2, h3 {
 	font-weight: 700;
 }
 
+hr {
+	border: 1px solid #555;
+}
+
 h1 {
 	font-size: 4em;
 }
