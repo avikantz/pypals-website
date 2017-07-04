@@ -13,7 +13,7 @@ h1, h2, h3 {
 }
 
 hr {
-	border: 1px solid #555;
+	border: 1px solid #444;
 }
 
 h1 {
@@ -28,6 +28,12 @@ h2 {
 h3 {
 	color: #F5D76E;
 	font-size: 1.4em;
+}
+
+.faq {
+	color: #ECF0F1;
+	font-family: "Ek Mukta"
+	font-weight: 700;
 }
 
 a {

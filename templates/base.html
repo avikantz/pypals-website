@@ -44,12 +44,12 @@
 					<span style="background-color: #fff" class="icon-bar"></span>
 					<span style="background-color: #fff" class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/"><img src="{{ url_for('static',filename='images/mupy_nav.png') }}"></a>
+				<a class="navbar-brand" href="/"><img src="{{ url_for('static',filename='images/mupy.svg') }}" height="32px"></a>
 			</div>
 
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li {% if subtitle == 'MUPy' %} class="active" {% endif %}><a href="/">MUPy 2017</a></li>
+					<li {% if subtitle == 'MUPy' %} class="active" {% endif %}><a href="/">MUPy</a></li>
 					<!-- <li {% if request.endpoint == 'register' %} class="active" {% endif %}><a href="{{ url_for('register') }}">Register</a></li> -->
 					<li {% if request.endpoint == 'proposal' %} class="active" {% endif %}><a href="{{ url_for('proposal') }}">Proposal</a></li>
 					<!-- <li {% if request.endpoint == 'lightningproposal' %} class="active" {% endif %}><a href="{{ url_for('lightningproposal') }}">Lightning Talk CFP</a></li> -->
@@ -70,7 +70,7 @@
 
 		{% if subtitle == 'MUPy' %}
 			<div class="row text-center">
-				<a href="/"><img src="{{ url_for('static',filename='images/mupy.png') }}"></a>
+				<a href="/"><img src="{{ url_for('static',filename='images/mupy.svg') }}" height="120px"></a>
 				<p class="lead">Manipal's Python Developer Conference</p>
 				<h2 class="lead">October 21-22, 2017</h2>
 			</div>
@@ -126,7 +126,7 @@
 						<p>PyPals - Manipal</p>
 					</div>
 					<div class="col-md-6 text-center">
-						<p>Made with ♥ by <a href="http://github.com/PyPals">PyPals</a>.</p>
+						<p>Made with ♥ by <a href="http://github.com/PyPals"><img src="{{ url_for('static',filename='images/pypals.svg') }}" height="20px" class="inline"></a>.</p>
 					</div>
 
 				</div>
