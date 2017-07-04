@@ -1,5 +1,4 @@
 @import url(font-awesome.min.css);
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
 
 /*
 	Multiverse by HTML5 UP
@@ -168,11 +167,12 @@
 
 	body, input, select, textarea {
 		color: #a0a0a1;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
-		font-size: 15pt;
+		font-family: "Ek Mukta", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+		font-size: 1.2em;
 		font-weight: 300;
 		letter-spacing: 0.025em;
 		line-height: 1.65;
+		text-align: justify;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -194,11 +194,13 @@
 
 	p {
 		margin: 0 0 2em 0;
+		font-size: 1.2em;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
-		font-weight: 300;
+		font-weight: 700;
+		font-size: 1.5em;
 		letter-spacing: 0.1em;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
