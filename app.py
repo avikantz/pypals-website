@@ -55,6 +55,10 @@ def repo():
 def mu_py():
     return render_template('index.html', subtitle="MUPy")
 
+@app.route(u'/mupy2016')
+def mupy2016_1():
+    return redirect(u'/\u03BCpy2016')
+
 @app.route(u'/\u03BCpy2016')
 def mupy2016():
     data = []
