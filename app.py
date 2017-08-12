@@ -53,7 +53,7 @@ def repo():
 
 @app.route(u'/\u03BCpy')
 def mu_py():
-    return render_template('index.html', subtitle="MUPy")
+    return render_template('index.html', title="MUPy 2017", subtitle="MUPy")
 
 @app.route(u'/mupy2016')
 def mupy2016_1():
@@ -444,4 +444,4 @@ def bad_request(e):
     return render_template('404.html', title="Bad request"), 400
 
 if __name__ == "__main__":
-    app.run(port = 3000)
+    app.run(port = 3000, debug=True)
