@@ -141,6 +141,7 @@ def sched_detail(talk_id):
     return jsonify(talk_data)
 
 @app.route("/talk")
+@app.route("/talk/")
 def talk():
 
     data = []
@@ -169,6 +170,7 @@ def talk():
         subtitle="Talks Schedule")
 
 @app.route("/talk/<talk_id>")
+@app.route("/talk/<talk_id>/")
 def talk_detail(talk_id):
 
     data = []
@@ -195,6 +197,7 @@ def talk_detail(talk_id):
         details = talk_data)
 
 @app.route('/sabdedobc')
+@app.route('/sabdedobc/')
 def curr_reg():
     collection = conn['pypals'].registrations
     a = list(collection.find())
@@ -211,6 +214,7 @@ def curr_reg():
         dat.append(d)
     return jsonify(dat)
 
+@app.route('/sabdedobc/<key>')
 @app.route('/sabdedobc/<key>/')
 def curr_reg_detail(key):
     collection = conn['pypals'].registrations
@@ -221,6 +225,7 @@ def curr_reg_detail(key):
         dat.append(l.get(key))
     return jsonify(dat)
 
+@app.route('/count')
 @app.route('/count/')
 def total_reg():
     collection = conn['pypals'].registrations
@@ -230,6 +235,7 @@ def total_reg():
     return jsonify(count)
 
 @app.route('/register', methods=['POST', 'GET'])
+@app.route('/register/', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
         return render_template('register.html', subtitle="Register", \
@@ -297,6 +303,7 @@ def add_reg(data, json = False):
 
 
 @app.route('/checkregistration', methods=['POST'])
+@app.route('/checkregistration/', methods=['POST'])
 def check_reg():
     data = request.get_json()
     res = {}
@@ -318,6 +325,7 @@ def check_reg():
 
 
 @app.route('/attendance', methods=['POST', 'GET'])
+@app.route('/attendance/', methods=['POST', 'GET'])
 def attendance():
     if request.headers.get('PyPals-Authorization') != app_key:
             return "Unauthorised"
@@ -379,14 +387,17 @@ def attendance():
             #    return add_attendance(name, college_id, eventid)
 
 @app.route('/android')
+@app.route('/android/')
 def android():
     return redirect("https://play.google.com/store/apps/details?id=lugmanipal.mupy")
 
 @app.route('/ios')
+@app.route('/ios/')
 def ios():
     return redirect("https://appsto.re/in/cAEifb.i")
 
 @app.route('/attendance/most')
+@app.route('/attendance/most/')
 def most_attendance():
     if request.headers.get('PyPals-Authorization') != app_key:
             return "Unauthorised"
