@@ -71,7 +71,7 @@ def lugm():
     return redirect('http://lugm.xyz/')
 
 @app.route("/mupy2017")
-def norm_mupy():
+def norm_mupy_1():
     return redirect(u'/\u03BCpy')
 
 @app.route("/mupy")
