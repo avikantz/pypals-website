@@ -70,6 +70,10 @@ def mupy2016():
 def lugm():
     return redirect('http://lugm.xyz/')
 
+@app.route("/mupy2017")
+def norm_mupy():
+    return redirect(u'/\u03BCpy')
+
 @app.route("/mupy")
 def norm_mupy():
     return redirect(u'/\u03BCpy')
