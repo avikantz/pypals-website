@@ -162,7 +162,7 @@ def talk():
         timestr = time.strftime("%I:%M %p")
         dat["begin_time"] = timestr
         dat["date"] = datestr
-        if (datestr == "Oct 22, 2016"):
+        if (datestr == "Oct 21, 2017"):
             day1.append(dat)
         else:
             day2.append(dat)
