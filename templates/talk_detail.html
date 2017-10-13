@@ -42,14 +42,7 @@
 <div class="row">
   <div class="col-md-12 text-left">
   	<hr>
-	<h2 style="color:#7986cb">Talk description
-		{% if details['type'] == 'R' %} 
-			(Face to Face)
-		{% elif details['type'] == 'V' %}
-			(Videocon)
-		{% else %}
-			(Flash Talk)
-		{% endif %}
+	<h2 style="color:#7986cb">Talk description ({{ details['type'] }})
 	</h2>
 	<p style="white-space: pre-wrap;"> {{ details['description'] }} </p>
   </div>

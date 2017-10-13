@@ -152,6 +152,8 @@ def talk():
     with open('talk.json') as data_file:
         data = json.load(data_file, strict = False)
 
+    data = sorted(data, key=lambda k: k['begin_time'])
+
     day1 = []
     day2 = []
 

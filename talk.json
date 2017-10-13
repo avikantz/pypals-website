@@ -16,7 +16,7 @@
   },
   {
     "about_speaker": "Abhishek is presently working as Deep Learning Scientist at Predible Health. \n\nThey have build state of the art segmentation network for liver and tumour and vessel segmentations. \n\nHe has spoken at Shri Mata Vaishno Devi University at their SFD celebrations and will also be submitting a proposal at PyCon India. \n\nHe has been a constant contributor in the open source world and a regular attendee of PyCon and other conferences every year.",
-    "begin_time": "201710221000",
+    "begin_time": "201710211630",
     "description": "Semantic Segmentation of an image is to assign each pixel in the input image a semantic class in order to get a pixel-wise dense classification. \n\nWhile semantic segmentation/scene parsing has been a part of the computer vision community since late 2007, but much like other areas in computer vision, a major breakthrough came when fully convolutional neural networks were first used by 2014 Long et. al. to perform end-to-end segmentation of natural images. \n\nI will walk through the introduction to classification network and then summarize the methods and papers on segmentation network and also about some of the state of the art papers and how semantic segmentation is helping the world build medical and self-driving cars possible. ",
     "duration": "45 minutes",
     "github": "https://github.com/vibrantabhi19",
@@ -150,7 +150,7 @@
     "type": "Track One"
   },
   {
-    "about_speaker": "Yash Kumar Lal (or YKL) is a 4th year CSE student who has dabbled in the field of Natural Language Processing. He is also one of the founders of PyPals and MUPy and stays active in the open source community.",
+    "about_speaker": "Yash Kumar Lal (YKL) is a 4th year CSE student who has dabbled in the field of Natural Language Processing. He is also one of the founders of PyPals and MUPy and stays active in the open source community.",
     "begin_time": "201710221600",
     "description": "Polysemy is the coexistence of many possible meanings for a word or phrase.\n\nThe talk would attempt to cover the following:\n- Word Representations\n- Distributional Semantics\n- GloVe and Word2Vec\nLimitations of unsupervised and statistical methods\n- Word Senses, Why not just use Word Sense disambiguation to distinguish between polysemous occurrences? \n- Possible approaches to handle polysemy\n- Concordance based approach",
     "duration": "45 minutes",
@@ -226,7 +226,7 @@
   },
   {
     "about_speaker": "Ashwath Rao and Murlikrishna SN are senior scale assistant professors at MIT, Manipal, who are currently researching the field of Natural Language Processing.",
-    "begin_time": "201710221830",
+    "begin_time": "201710211630",
     "description": "Treebank is a major linguistic resource for various NLP tasks. The treebanks have proved to be a crucial resource for higher level NLP research and developing solutions for various socially relevant NLP applications. Under the administrative approval letter No. 11(12)/2012-HCC (TDIL) dated 29.07.2013 from Department of Electronics and Information Technology, New Delhi under the Ministry of Information and Communication Technology, treebank develop- ment for four indian langauges namely Kannada, Bengali, Marathi and Malayalam started with International Institute of Information Technology, Hyderabad as the lead institute. Kannada language treebank developmet was obtained by MIT Manipal. Bengali language development was carried out by Jadhavpur University, Marathi language was by IIT Mumbai, Malayalam by Centre for Development of Imaging Technology, Trivandrum.\n\nIn each of the language verticals about 160K words are tagged for Morphology, Part-of- Speech, Chunking, Dependency annotation. All these tasks are done by annotators. Annotators are trained for carrying out these tasks. Quality of treebank rests on the correct annotation of words. Manual verification of annotated data is a time consuming task. Development of valida- tion tools will reduce the human time in validation. MIT Manipal along with IIIT, Hyderabad have developed validation tools using Python for verification of Treebank. In this talk, we are going to share insight of validation tools.\n\nTopics Covered in the talk:\n- Checking for wx, UTF similarity\n- Representation of Shakti Standard Format blocks \n- Checking for Morph errors\n- Checking for Dependency cycles\n- Checking for Dependency errors",
     "duration": "45 minutes",
     "github": "https://github.com/xxx",

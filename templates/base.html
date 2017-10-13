@@ -53,7 +53,7 @@
 					<li {% if request.endpoint == 'register' %} class="active" {% endif %}><a href="{{ url_for('register') }}">Register</a></li>
 					<!-- <li {% if request.endpoint == 'proposal' %} class="active" {% endif %}><a href="{{ url_for('proposal') }}">Proposal</a></li> -->
 					<!-- <li {% if request.endpoint == 'lightningproposal' %} class="active" {% endif %}><a href="{{ url_for('lightningproposal') }}">Lightning Talk CFP</a></li> -->
-					<!-- <li {% if request.endpoint == 'talk' %} class="active" {% endif %}><a href="{{ url_for('talk') }}">Talks</a></li> -->
+					<li {% if request.endpoint == 'talk' %} class="active" {% endif %}><a href="{{ url_for('talk') }}">Schedule</a></li>
 					<li {% if request.endpoint == 'conduct' %} class="active" {% endif %}><a href="{{ url_for('conduct') }}">Code of Conduct</a></li>
 					<li {% if request.endpoint == 'faq' %} class="active" {% endif %}><a href="{{ url_for('faq') }}">FAQ</a></li>
 					<li {% if request.endpoint == '\u03BCpy2016' %} class="active" {% endif %}><a href="{{ url_for('mupy2016') }}">MUPy 2016</a></li>
