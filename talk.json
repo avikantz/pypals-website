@@ -16,7 +16,7 @@
   },
   {
     "about_speaker": "Abhishek is presently working as Deep Learning Scientist at Predible Health.\n\nThey have build state of the art segmentation network for liver and tumour and vessel segmentations.\n\nHe has spoken at Shri Mata Vaishno Devi University at their SFD celebrations and will also be submitting a proposal at PyCon India.\n\nHe has been a constant contributor in the open source world and a regular attendee of PyCon and other conferences every year.",
-    "begin_time": "201710211630",
+    "begin_time": "201710211830",
     "description": "Semantic Segmentation of an image is to assign each pixel in the input image a semantic class in order to get a pixel-wise dense classification.\n\nWhile semantic segmentation/scene parsing has been a part of the computer vision community since late 2007, but much like other areas in computer vision, a major breakthrough came when fully convolutional neural networks were first used by 2014 Long et. al. to perform end-to-end segmentation of natural images.\n\nI will walk through the introduction to classification network and then summarize the methods and papers on segmentation network and also about some of the state of the art papers and how semantic segmentation is helping the world build medical and self-driving cars possible. ",
     "duration": "45 minutes",
     "github": "https://github.com/vibrantabhi19",
@@ -45,7 +45,7 @@
     "type": "Track One"
   },
   {
-    "begin_time": "201710211830",
+    "begin_time": "201710211630",
     "about_speaker": "Vivek Kalyanarangan is a Data Scientist with 4+ years of hands on experience in Machine Learning Tools like Python, Tensorflow, Spark, R, Elasticsearch etc. He has worked across domains mainly in Healthcare and Travel and Hospitality. He wishes to make a trilingual contribution to the industry – Technology, Business, Analytics.\n\nTeam UNP has guided many students to embark on their maiden flight beyond the Horizons of Analytics.",
     "description": "The talk will give a brief introduction to Dockers, followed by coding examples for docker containers, building Machine Learning based micro services, and deploying on premise server and cloud.",
     "duration": "45 minutes",
@@ -137,7 +137,7 @@
   {
     "about_speaker": "Kartik Mandaville is the founder of SpringRole Inc, and a senior Technical Advisor at Science-Inc, Handstand, Lenny and Burst.\n\nHe graduated from Carnegie Mellon University with Masters from the Language Technologies Institute, School of Computer Science, and is an alumni of MIT Manipal, 2012 batch.",
     "begin_time": "201710221000",
-    "description": "A short story on how this new technology is shaping and moving beyond the bitcoin hype. In this talk, Kartik will attempt to reveal the principle behind Blockchain, its potential to defy current systems and why Blockchain is probably the biggest technological invention since the PC in the 1970s and the Internet in the 1990s.",
+    "description": "A short story on how this new technology is shaping and moving beyond the bitcoin hype. In this talk, Kartik will attempt to reveal the principle behind Blockchain, its potential to defy current systems and why Blockchain is probably the biggest technological invention since the PC in the 1970s and the Internet in the 1990s.\n\nThe talk will cover the following points:\n- What is blockchain\n- Can blockchain replace internet\n- How to build dapps\n- Create your own cryptocurrency",
     "duration": "45 minutes",
     "github": "https://github.com/kar2905",
     "image": "https://avatars1.githubusercontent.com/u/92009?s=460&v=4",
