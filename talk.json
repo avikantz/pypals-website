@@ -10,7 +10,7 @@
     "location": "NLH 103",
     "speaker": "Aniket Maithani",
     "speaker_email": "maithani.aniket@gmail.com",
-    "talk_id": "anikmaith",
+    "talk_id": "anikmath",
     "title": "Property Based Testing using Hypothesis",
     "type": "Track One"
   },
@@ -69,7 +69,7 @@
     "linkedin": "https://www.linkedin.com/in/danieljohnevans",
     "location": "NLH 203",
     "speaker": "Daniel J Evans",
-    "speaker_email": "reachoutunp@gmail.com",
+    "speaker_email": "me@danieljevans.org",
     "talk_id": "danevans",
     "title": "Digital Humanities (Videocon)",
     "type": "Track One"
@@ -105,7 +105,7 @@
     "type": "Track One"
   },
   {
-    "about_speaker": "Soumyadeep Ghosh is a student of MIT from batch of 2015, currently working as an engineer with PharmEasy.in. He is looking forward to get this esteemed opportunity to go back to my beloved alma mater and give something back to my juniors, as I had received in numerous events.",
+    "about_speaker": "Soumyadeep Ghosh is a student of MIT from batch of 2015, currently working as an engineer with PharmEasy.in. He is looking forward to get this esteemed opportunity to go back to my beloved alma mater and give something back to my juniors, as he had received in numerous events.",
     "begin_time": "201710221700",
     "description": "Microservices is an architecture used to develop multiple systems which are loosely coupled, but intra-connected enough at the same time to collectively serve one ultimate cause.\n\nDuring a session at MuPy, the following things will be covered:\n\n- What is a microservice?\n- How to connect multiple microservice?\n- How to maintain multiple microservices at the same time for one org?\n- When one should start building microservices?\n- Lastly, why one should consider not moving towards a microservices architecture?",
     "duration": "45 minutes",
@@ -122,7 +122,7 @@
   {
     "about_speaker": "Sailesh Sriram is of the founders of MUPy. After graduating from MIT, Manipal in 2017, he's working full time at Amazon, while also being a regular contributor to the world of open source.",
     "begin_time": "201710221500",
-    "description": "Hopefully, this will be something cool.",
+    "description": "Sailesh'll give a day by day break down on new things he learnt in one week.",
     "duration": "45 minutes",
     "github": "https://github.com/SaileshSriram",
     "image": "https://avatars1.githubusercontent.com/u/8988733?s=400&v=4",
@@ -131,7 +131,7 @@
     "speaker": "Sailesh Sriram",
     "speaker_email": "saileshsriram572@gmail.com",
     "talk_id": "saileshs",
-    "title": "Something Cool",
+    "title": "What I learnt about Python in one week",
     "type": "Track Two"
   },
   {
@@ -160,7 +160,7 @@
     "location": "NLH 103",
     "speaker": "Yash Kumar Lal",
     "speaker_email": "yklal95@gmail.com",
-    "talk_id": "yashlalu",
+    "talk_id": "yashklal",
     "title": "Neural Embeddings for Polysemous Words",
     "type": "Track One"
   },
@@ -170,7 +170,7 @@
     "description": "MIT Hodor is a messenger bot that tells you your attendance, timetable, etc through SLCM. I’ll be talking about how we went about building it, what made us build it and the problems that we faced along the way. I’ll outline each part in 5-7 minute chunks.\n\n\nOutreach:\n\n1 out of every 5 first year kids actively uses the bot.\n\nA lot of students want to know how the bot was built, hence the audience will be engaged and interested in the talk.\n\n\nMain topics:\n\n- Why I wanted to build it 5 mins\n\n- Why python was perfect for building it (explain the merits, etc) 5 mins\n\n- The tools I used to build it (Heroku, selenium, bs4, facebook’s API, etc) 10 mins\n\n- Explain how the bot works (Receive request, scrape, parse, etc) 10 minutes\n\n- The unique problems that we faced (Writing straight to db, etc) 10 mins\n\n\nSummary:\n\n\nOverall along the way I’ll be showing little code snippets that will also outline the best practices for python. (When to modularise, when not to), (When to use tuples, etc). All the examples will be very practical, hence easy for the audience to grasp.",
     "duration": "45 minutes",
     "github": "https://github.com/kalbhor",
-    "image": "http://www.pi-cube.com/wp-content/uploads/2015/04/team-placeholder.jpg",
+    "image": "https://pbs.twimg.com/profile_images/840536894303756288/gq09gq4V_400x400.jpg",
     "linkedin": "https://www.linkedin.com/in/lakshay-kalbhor-07584a139/",
     "location": "NLH 105",
     "speaker": "Lakshay Kalbhor",
