@@ -77,7 +77,7 @@
   {
     "about_speaker": "Danial J Evans is a Digital Humanities Developer at Carnegie Mellon University",
     "begin_time": "201710211800",
-    "description": "The talk is about Digital Humanities.",
+    "description": "Python, due to the ease with which it is learned and its versatility, is afforded wide sweeping popularity within the field of digital humanities. This talk will give an overview of the field as it evolved from humanities computing into its current form. It will also touch on the field’s history and a few ongoing projects, emphasizing the unique role python has played in broadening the horizons of the humanities.",
     "duration": "30 minutes",
     "github": "https://github.com",
     "image": "https://pbs.twimg.com/profile_images/544889184943484928/UC42xM2i_400x400.jpeg",
@@ -86,7 +86,7 @@
     "speaker": "Daniel J Evans",
     "speaker_email": "me@danieljevans.org",
     "talk_id": "danevans",
-    "title": "Digital Humanities (Videocon)",
+    "title": "The Computational and the Humanities: Python in the Humanities (Videocon)",
     "type": "Track One"
   },
   {
@@ -105,9 +105,9 @@
     "type": "Track One"
   },
   {
-    "about_speaker": "Ayodhyankit Paul is a student and a machine learning enthusiast. He has completed his Engineering this year, and is now preparing for higher study.\n\nHe is the creator and admin of Tensor Flow\nIndia group. He is also interested in Security and Hacking field and has found many vulnerabilities\non web.\n\nHe loves to play with neural networks and his main focus area is Unsupervised Learning.\n\nHe is also wordpress and php developer and completed 100+ ecommerce websites project as\nfreelancer developer.",
+    "about_speaker": "Ayodhyankit Paul is a student and a machine learning enthusiast. He has completed his Engineering this year, and is now preparing for higher study.\n\nHe is the creator and admin of Tensor Flow India group. He is also interested in Security and Hacking field and has found many vulnerabilities on the web.\n\nHe loves to play with neural networks and his main focus area is Unsupervised Learning.\n\nHe is also wordpress and php developer and completed 100+ ecommerce websites project as a freelancer developer.",
     "begin_time": "201710221100",
-    "description": "Decorators belong most probably to the most beautiful and most powerful design possibilities in Python, but at the same time the concept is considered by many as complicated to get into.\n\nThis talk covers decorator from the basic to advanced uses including decorators in lambda (Anonymous function).\n\nThe goal of this talk is to explore decorators by methodically stepping through how and why they work. Along the way we'll touch on closures, scopes, nested function and how decorator\ninternally works.\n\nAt the end of the workshop, the participants will be able to write decorators without any confusion,\nincluding the ones that take arguments.",
+    "description": "Decorators belong most probably to the most beautiful and most powerful design possibilities in Python, but at the same time the concept is considered by many as complicated to get into.\n\nThis talk covers decorator from the basic to advanced uses including decorators in lambda (Anonymous function).\n\nThe goal of this talk is to explore decorators by methodically stepping through how and why they work. Along the way we'll touch on closures, scopes, nested function and how decorator internally works.\n\nAt the end of the workshop, the participants will be able to write decorators without any confusion, including the ones that take arguments.",
     "duration": "50 minutes",
     "github": "https://github.com/exepaul",
     "image": "http://www.pi-cube.com/wp-content/uploads/2015/04/team-placeholder.jpg",
