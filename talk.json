@@ -75,7 +75,7 @@
     "type": "Track One"
   },
   {
-    "about_speaker": "Danial J Evans is a Digital Humanities Developer at Carnegie Mellon University",
+    "about_speaker": "Daniel J Evans is a full-stack developer, graduate student, and researcher at Carnegie Mellon University where he is employed in the rapid-prototyping of digital humanities projects. His interests lay in the computational analysis of the history of the book. Previously he worked in publishing where he negotiated text and data mining rights for researchers and produced digital archives. He holds a B.A. in History with a concentration in Russian and Eastern European Studies. ",
     "begin_time": "201710211800",
     "description": "Python, due to the ease with which it is learned and its versatility, is afforded wide sweeping popularity within the field of digital humanities. This talk will give an overview of the field as it evolved from humanities computing into its current form. It will also touch on the field’s history and a few ongoing projects, emphasizing the unique role python has played in broadening the horizons of the humanities.",
     "duration": "30 minutes",
@@ -84,7 +84,7 @@
     "linkedin": "https://www.linkedin.com/in/danieljohnevans",
     "location": "NLH 203",
     "speaker": "Daniel J Evans",
-    "speaker_email": "me@danieljevans.org",
+    "speaker_email": "djevans@cmu.edu",
     "talk_id": "danevans",
     "title": "The Computational and the Humanities: Python in the Humanities (Videocon)",
     "type": "Track One"
