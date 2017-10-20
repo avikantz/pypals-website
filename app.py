@@ -437,7 +437,7 @@ def add_attendance(name, college_id, eventid):
         attend['college_id'] = college_id
         attend['talks_attended'] = [str(eventid)]
         attend.save()
-        return jsonify({ "success": True, "message": "Congratulations on attending your first talk!" })
+        return jsonify({ "success": True, "message": "Congratulations " + str(college_id) + " on attending your first talk!" })
     else:
         cursor = collection.find(query)
         attend = [doc for doc in cursor][0]
@@ -452,9 +452,9 @@ def add_attendance(name, college_id, eventid):
                 "talks_attended":ta
             }
             }, upsert=False, multi=False)
-            return jsonify({ "success": True, "message": "Thank you for attending another talk." })
+            return jsonify({ "success": True, "message": "Thank you " + str(college_id) + " for attending another talk." })
         else:
-            return jsonify({ "success": True, "message": "You've already attended this talk." })
+            return jsonify({ "success": True, "message": "You've already attended this talk, " + str(college_id) + "." })
 
 
 @app.errorhandler(404)
