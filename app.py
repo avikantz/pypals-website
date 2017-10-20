@@ -330,8 +330,8 @@ def check_reg():
     return jsonify(res)
 
 
-@app.route('/attendance', methods=['GET'])
-@app.route('/attendance/', methods=['GET'])
+@app.route('/getattendance', methods=['GET'])
+@app.route('/getattendance/', methods=['GET'])
 def attendance():
     if request.headers.get('PyPals-Authorization') != app_key:
         return "Unauthorised"
@@ -352,7 +352,7 @@ def attendance():
         else:
             return jsonify([])
 
-@app.route('/postattendance/', methods=['GET', 'POST'])
+@app.route('/attendance', methods=['GET', 'POST'])
 def post_attendance():
     if request.headers.get('PyPals-Authorization') != app_key:
         return "Unauthorised"
@@ -360,6 +360,7 @@ def post_attendance():
     print('data: ' + str(data))
     name = data['name']
     college_id = data['college_id']
+    eventid = data['eventid']
     registrations = conn['pypals'].registrations
     query = {}
     options = []
