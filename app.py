@@ -330,67 +330,71 @@ def check_reg():
     return jsonify(res)
 
 
-@app.route('/attendance', methods=['POST', 'GET'])
-@app.route('/attendance/', methods=['POST', 'GET'])
+@app.route('/attendance', methods=['GET'])
+@app.route('/attendance/', methods=['GET'])
 def attendance():
     if request.headers.get('PyPals-Authorization') != app_key:
-            return "Unauthorised"
-    if request.method == 'GET':
-        college_id = request.args.get("college_id")
-        if college_id is None:
-            res = {}
-            res['message'] = "Invalid args"
-            return jsonify(res)
-        else:
-            collection = conn['pypals'].attendance
-            query = {}
-            options = []
-            options.append({'college_id':str(college_id)})
-            query['$or'] = options
-            talks_attended = list(collection.find(query))
-            if len(talks_attended) > 0:
-                return jsonify(talks_attended[0]['talks_attended'])
-            else:
-                return jsonify([])
+        return "Unauthorised"
+    college_id = request.args.get("college_id")
+    if college_id is None:
+        res = {}
+        res['message'] = "Invalid args"
+        return jsonify(res)
     else:
-        data = request.get_json()
-        name = data['name']
-        college_id = data['college_id']
-        registrations = conn['pypals'].registrations
+        collection = conn['pypals'].attendance
         query = {}
         options = []
         options.append({'college_id':str(college_id)})
         query['$or'] = options
-        if len(list(registrations.find(query))) < 1:
-        	return jsonify({"success": False,"message":"Unregistered"})
-        eventid = data['eventid']
-
-        talk_data = []
-        with open('talk.json') as data_file:
-            talk_data = json.load(data_file, strict = False)
-
-        talk_time = None
-        for datum in talk_data:
-            if eventid == datum["talk_id"]:
-                talk_data = datum.copy()
-                timestamp = talk_data["begin_time"]
-                talk_time = datetime.strptime(timestamp, "%Y%m%d%H%M")
-                # talk_time += timedelta(minutes = 45)
-        if talk_time is None:
-            return jsonify({"success": False, "message" : "Invalid talk"})
+        talks_attended = list(collection.find(query))
+        if len(talks_attended) > 0:
+            return jsonify(talks_attended[0]['talks_attended'])
         else:
-            return add_attendance(name, college_id, eventid)
-            # curr_time = datetime.now()
-            # curr_time = datetime.strptime("201610231336", "%Y%m%d%H%M") #For testing
-            # Move this registration window to something in the middle of the talk, as decided.
-            # diff = (curr_time - talk_time).total_seconds()
-            # print curr_time, talk_time, diff
-            # if diff < 0:
-            #    return jsonify({"success":False, "message": "Talk yet to start."})
-            # elif diff > 300:
-            #    return jsonify({"success":False, "message": "Sorry Bruh! You couldn't make it."})
-            # else:
-            #    return add_attendance(name, college_id, eventid)
+            return jsonify([])
+
+@app.route('/postattendance/', methods=['GET', 'POST'])
+def post_attendance():
+    if request.headers.get('PyPals-Authorization') != app_key:
+        return "Unauthorised"
+    data = request.get_json()
+    print('data: ' + str(data))
+    name = data['name']
+    college_id = data['college_id']
+    registrations = conn['pypals'].registrations
+    query = {}
+    options = []
+    options.append({'college_id':str(college_id)})
+    query['$or'] = options
+    
+    if len(list(registrations.find(query))) < 1:
+        return add_attendance(name, college_id, eventid)
+
+    talk_data = []
+    with open('talk.json') as data_file:
+        talk_data = json.load(data_file, strict = False)
+
+    talk_time = None
+    for datum in talk_data:
+        if eventid == datum["talk_id"]:
+            talk_data = datum.copy()
+            timestamp = talk_data["begin_time"]
+            talk_time = datetime.strptime(timestamp, "%Y%m%d%H%M")
+            # talk_time += timedelta(minutes = 45)
+    if talk_time is None:
+        return jsonify({"success": False, "message" : "Invalid talk"})
+    else:
+        return add_attendance(name, college_id, eventid)
+        # curr_time = datetime.now()
+        # curr_time = datetime.strptime("201610231336", "%Y%m%d%H%M") #For testing
+        # Move this registration window to something in the middle of the talk, as decided.
+        # diff = (curr_time - talk_time).total_seconds()
+        # print curr_time, talk_time, diff
+        # if diff < 0:
+        #    return jsonify({"success":False, "message": "Talk yet to start."})
+        # elif diff > 300:
+        #    return jsonify({"success":False, "message": "Sorry Bruh! You couldn't make it."})
+        # else:
+        #    return add_attendance(name, college_id, eventid)
 
 @app.route('/android')
 @app.route('/android/')
