@@ -400,7 +400,7 @@ def post_attendance():
 @app.route('/android')
 @app.route('/android/')
 def android():
-    return redirect("https://play.google.com/store/apps/details?id=lugmanipal.mupy")
+    return redirect("https://play.google.com/store/apps/details?id=com.pypals.gilgamesh.mupy")
 
 @app.route('/ios')
 @app.route('/ios/')
