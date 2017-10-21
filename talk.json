@@ -1,20 +1,5 @@
 [
   {
-    "about_speaker": "Aniket Maithani works at RADIOWALLA NETWORK PVT. LTD, where he handles Development & Dev-Ops. He's a B.Tech (CS&E) graduate from Amity University, Noida (UP). He loves to travel and blog during free time. He's a cricket lover, guitar player and a chai addict.",
-    "begin_time": "201710221500",
-    "description": "Writing \"Test\" sometimes become a trivial task with the ever increasing code base and underlying feature-set. There are major Importance of testing in the part of writing the software and it is better to introduce testing in the early stage of software development, so it help to identify the defects in the early stage & try to avoid the bugs finding & get resolve in the last critical stage.\n\nBut with time the TEST Code itself becomes quite huge that it becomes a trivial problem to write test-cases and maintain the same!\n\nProperty-based tests make statements about the output of your code based on the input, and these statements are verified for many different possible inputs. A property-based testing framework runs the same test over and over with generated input.\n\nThe talk will focus on:\n- Using Hypothesis to write property based testing\n- Using Hypothesis in CI Environment\n- Do's and Dont's while using Property Based Testing.\n\nPrerequisites:\n- Basic Python Knowledge\n- Idea about Testing Guidelines (basic)\n- Understanding of CI Environment (basic)",
-    "duration": "50 minutes",
-    "github": "https://github.com/aniketmaithani",
-    "image": "https://avatars3.githubusercontent.com/u/920701?v=4&s=400",
-    "linkedin": "https://www.linkedin.com/in/aniketmaithani/",
-    "location": "NLH 403",
-    "speaker": "Aniket Maithani",
-    "speaker_email": "maithani.aniket@gmail.com",
-    "talk_id": "anikmath",
-    "title": "Property Based Testing using Hypothesis",
-    "type": "Track One"
-  },
-  {
     "about_speaker": "Abhishek is presently working as Deep Learning Scientist at Predible Health.\n\nThey have build state of the art segmentation network for liver and tumour and vessel segmentations.\n\nHe has spoken at Shri Mata Vaishno Devi University at their SFD celebrations and will also be submitting a proposal at PyCon India.\n\nHe has been a constant contributor in the open source world and a regular attendee of PyCon and other conferences every year.",
     "begin_time": "201710211830",
     "description": "Semantic Segmentation of an image is to assign each pixel in the input image a semantic class in order to get a pixel-wise dense classification.\n\nWhile semantic segmentation/scene parsing has been a part of the computer vision community since late 2007, but much like other areas in computer vision, a major breakthrough came when fully convolutional neural networks were first used by 2014 Long et. al. to perform end-to-end segmentation of natural images.\n\nI will walk through the introduction to classification network and then summarize the methods and papers on segmentation network and also about some of the state of the art papers and how semantic segmentation is helping the world build medical and self-driving cars possible. ",
@@ -120,23 +105,8 @@
     "type": "Track One"
   },
   {
-    "about_speaker": "Soumyadeep Ghosh is a student of MIT from batch of 2015, currently working as an engineer with PharmEasy.in. He is looking forward to get this esteemed opportunity to go back to my beloved alma mater and give something back to my juniors, as he had received in numerous events.",
-    "begin_time": "201710221700",
-    "description": "Microservices is an architecture used to develop multiple systems which are loosely coupled, but intra-connected enough at the same time to collectively serve one ultimate cause.\n\nDuring a session at MuPy, the following things will be covered:\n\n- What is a microservice?\n- How to connect multiple microservice?\n- How to maintain multiple microservices at the same time for one org?\n- When one should start building microservices?\n- Lastly, why one should consider not moving towards a microservices architecture?",
-    "duration": "50 minutes",
-    "github": "https://github.com/deep11194g",
-    "image": "https://media-exp1.licdn.com/media/AAEAAQAAAAAAAA0lAAAAJDk5NjA1ZDBmLWUwOWMtNDhlZS1iNGU0LTEzYTUxNjU4ODZjYQ.jpg",
-    "linkedin": "https://www.linkedin.com/in/soumyadeep-ghosh-38447694/",
-    "location": "NLH 403",
-    "speaker": "Soumyadeep Ghosh",
-    "speaker_email": "soumyadeep11194@gmail.com",
-    "talk_id": "soumyade",
-    "title": "Microservices Architecture",
-    "type": "Track One"
-  },
-  {
     "about_speaker": "Sailesh Sriram is of the founders of MUPy. After graduating from MIT, Manipal in 2017, he's working full time at Amazon, while also being a regular contributor to the world of open source.",
-    "begin_time": "201710221500",
+    "begin_time": "201710221600",
     "description": "Sailesh'll give a day by day break down on new things he learnt in one week.",
     "duration": "50 minutes",
     "github": "https://github.com/SaileshSriram",
@@ -147,7 +117,7 @@
     "speaker_email": "saileshsriram572@gmail.com",
     "talk_id": "saileshs",
     "title": "What I learnt about Python in one week",
-    "type": "Track Two"
+    "type": "Track One"
   },
   {
     "about_speaker": "Kartik Mandaville is the founder of SpringRole Inc, and a senior Technical Advisor at Science-Inc, Handstand, Lenny and Burst.\n\nHe graduated from Carnegie Mellon University with Masters from the Language Technologies Institute, School of Computer Science, and is an alumni of MIT Manipal, 2012 batch.",
@@ -166,7 +136,7 @@
   },
   {
     "about_speaker": "Yash Kumar Lal (YKL) is a 4th year CSE student who has dabbled in the field of Natural Language Processing. He is also one of the founders of PyPals and MUPy and stays active in the open source community.",
-    "begin_time": "201710221600",
+    "begin_time": "201710221500",
     "description": "Polysemy is the coexistence of many possible meanings for a word or phrase.\n\nThe talk would attempt to cover the following:\n- Word Representations\n- Distributional Semantics\n- GloVe and Word2Vec\nLimitations of unsupervised and statistical methods\n- Word Senses, Why not just use Word Sense disambiguation to distinguish between polysemous occurrences?\n- Possible approaches to handle polysemy\n- Concordance based approach",
     "duration": "50 minutes",
     "github": "https://github.com/ykl7",
@@ -226,7 +196,7 @@
   },
   {
     "about_speaker": "Ankush is the co-founder at Alexander Computing Private Limited, Former Automation Head at Project Manas, and a third year student at MIT, Manipal.",
-    "begin_time": "201710221700",
+    "begin_time": "201710221500",
     "description": "When we started programming back in first semester, all we did was finding factorial and fibonacci numbers. But as we continue to learn we start to learn what else we can do other than just doing boring matrix multiplications. I want to talk about​ ​automation​ and common​ ​lifehack​ which makes python an interesting language using concept of \"if this then that\".\n\nFew points covered in the talk:\n- Using Google Sheets API for automatic back up of data.\n- Automatic backup on S3 using BOTO3 for using aws services like S3 , Dynamodb etc",
     "duration": "50 minutes",
     "github": "https://github.com/ankode",
