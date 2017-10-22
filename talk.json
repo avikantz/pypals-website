@@ -106,7 +106,7 @@
   },
   {
     "about_speaker": "Sailesh Sriram is of the founders of MUPy. After graduating from MIT, Manipal in 2017, he's working full time at Amazon, while also being a regular contributor to the world of open source.",
-    "begin_time": "201710221600",
+    "begin_time": "201710221500",
     "description": "Sailesh'll give a day by day break down on new things he learnt in one week.",
     "duration": "50 minutes",
     "github": "https://github.com/SaileshSriram",
@@ -136,7 +136,7 @@
   },
   {
     "about_speaker": "Yash Kumar Lal (YKL) is a 4th year CSE student who has dabbled in the field of Natural Language Processing. He is also one of the founders of PyPals and MUPy and stays active in the open source community.",
-    "begin_time": "201710221500",
+    "begin_time": "201710221600",
     "description": "Polysemy is the coexistence of many possible meanings for a word or phrase.\n\nThe talk would attempt to cover the following:\n- Word Representations\n- Distributional Semantics\n- GloVe and Word2Vec\nLimitations of unsupervised and statistical methods\n- Word Senses, Why not just use Word Sense disambiguation to distinguish between polysemous occurrences?\n- Possible approaches to handle polysemy\n- Concordance based approach",
     "duration": "50 minutes",
     "github": "https://github.com/ykl7",
