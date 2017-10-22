@@ -16,7 +16,7 @@
   },
   {
     "about_speaker": "Sajid works as a Data Scientist with an experience of over 4 years. He teaches data science online at StepUp Analytics, be sure to take the free course on data science.",
-    "begin_time": "201710221400",
+    "begin_time": "201710221430",
     "description": "Now a days Python has become a very powerful programming language and is used for many different applications. Over time, the huge community around this open source language has created many tools to efficiently work with Python. In recent years, a number of tools have been built specifically for data science and Analytics be it be Analyzing data, visualization or data handling. As a result, analyzing data with Python has never been easier.",
     "duration": "50 minutes",
     "github": "https://github.com",
@@ -106,7 +106,7 @@
   },
   {
     "about_speaker": "Sailesh Sriram is of the founders of MUPy. After graduating from MIT, Manipal in 2017, he's working full time at Amazon, while also being a regular contributor to the world of open source.",
-    "begin_time": "201710221500",
+    "begin_time": "201710221530",
     "description": "Sailesh'll give a day by day break down on new things he learnt in one week.",
     "duration": "50 minutes",
     "github": "https://github.com/SaileshSriram",
@@ -136,7 +136,7 @@
   },
   {
     "about_speaker": "Yash Kumar Lal (YKL) is a 4th year CSE student who has dabbled in the field of Natural Language Processing. He is also one of the founders of PyPals and MUPy and stays active in the open source community.",
-    "begin_time": "201710221600",
+    "begin_time": "201710221630",
     "description": "Polysemy is the coexistence of many possible meanings for a word or phrase.\n\nThe talk would attempt to cover the following:\n- Word Representations\n- Distributional Semantics\n- GloVe and Word2Vec\nLimitations of unsupervised and statistical methods\n- Word Senses, Why not just use Word Sense disambiguation to distinguish between polysemous occurrences?\n- Possible approaches to handle polysemy\n- Concordance based approach",
     "duration": "50 minutes",
     "github": "https://github.com/ykl7",
@@ -151,7 +151,7 @@
   },
   {
     "about_speaker": "Lakshay is a first year student at MIT Manipal, author of various open source projects in Python and Go, such as MusicRepair and MIT-Hodor.",
-    "begin_time": "201710221100",
+    "begin_time": "201710221200",
     "description": "MIT Hodor is a messenger bot that tells you your attendance, timetable, etc through SLCM. I’ll be talking about how we went about building it, what made us build it and the problems that we faced along the way. I’ll outline each part in 5-7 minute chunks.\n\n\nOutreach:\n\n1 out of every 5 first year kids actively uses the bot.\n\nA lot of students want to know how the bot was built, hence the audience will be engaged and interested in the talk.\n\n\nMain topics:\n\n- Why I wanted to build it 5 mins\n\n- Why python was perfect for building it (explain the merits, etc) 5 mins\n\n- The tools I used to build it (Heroku, selenium, bs4, facebook’s API, etc) 10 mins\n\n- Explain how the bot works (Receive request, scrape, parse, etc) 10 minutes\n\n- The unique problems that we faced (Writing straight to db, etc) 10 mins\n\n\nSummary:\n\n\nOverall along the way I’ll be showing little code snippets that will also outline the best practices for python. (When to modularise, when not to), (When to use tuples, etc). All the examples will be very practical, hence easy for the audience to grasp.",
     "duration": "50 minutes",
     "github": "https://github.com/kalbhor",
@@ -181,7 +181,7 @@
   },
   {
     "about_speaker": "Ronald is a 5th semester student at MIT Manipal, and is co-founder of Alexander Computing, which is working on an AI based job platform.\n\nHe was previously working as an AI member in Project Manas, He also serves as a mentor in Dronaid.",
-    "begin_time": "201710221600",
+    "begin_time": "201710221630",
     "description": "Cloud Computing is a generic term now, it’s basically renting server’s on the Internet and using them. According to different cloud-computing vendors, you get different types of services IaaS(Infrastructure as a Service, eg. AWS, Azure), PaaS(Platform as a Service, eg. Heroku) etc.\n\nThis may need to you know how to manage servers to a certain extent. Also, Your server won’t be doing computations always, but you have to pay for the time it was online.\n\nHere comes Serverless Architecture, that uses microservices(something like a function for almost everything, that your server was doing). It becomes a little complex breaking down an entire app into Microservices, but it saves the headache of managing servers and also you are only charged for the time your function was executing, while is very cheap compared to dedicated servers cost.\n\nPrerequisites:\n\nGeneral Idea of Cloud Computing (Would be better, if already worked with AWS EC2 or Lambda, HTTP Requests, Python and Programming Basics.",
     "duration": "50 minutes",
     "github": "https://github.com/ronalddas",
@@ -196,7 +196,7 @@
   },
   {
     "about_speaker": "Ankush is the co-founder at Alexander Computing Private Limited, Former Automation Head at Project Manas, and a third year student at MIT, Manipal.",
-    "begin_time": "201710221500",
+    "begin_time": "201710221530",
     "description": "When we started programming back in first semester, all we did was finding factorial and fibonacci numbers. But as we continue to learn we start to learn what else we can do other than just doing boring matrix multiplications. I want to talk about​ ​automation​ and common​ ​lifehack​ which makes python an interesting language using concept of \"if this then that\".\n\nFew points covered in the talk:\n- Using Google Sheets API for automatic back up of data.\n- Automatic backup on S3 using BOTO3 for using aws services like S3 , Dynamodb etc",
     "duration": "50 minutes",
     "github": "https://github.com/ankode",
@@ -226,7 +226,7 @@
   },
   {
     "about_speaker": "Aneesh is ML/DL enthusiast VR and Software Developer for Mars Society, and a final year student at MIT, Manipal, who loves training end to end networks.",
-    "begin_time": "201710221200",
+    "begin_time": "201710221100",
     "description": "The talk is about building an architecture to transfer one image's style to another.\n\nSimilar to ones used in the famous Prisma applications, the talk will start with a slight intro to Neural Networks and then the Optimisation behind style transfer, and provide an explanation with online demos.",
     "duration": "50 minutes",
     "github": "https://github.com/aneesh-joshi",
@@ -241,7 +241,7 @@
   },
   {
     "about_speaker": "Pale and balding, one could easily mistake Siddharth Kothiyal (Siddy) for your standard, uninterested, bespectacled nerd. But when he is not busy screwing up his system with Windows installations, he experiments with Computer Vision with Python (among other things), gaining valuable experience on the front.",
-    "begin_time": "201710221400",
+    "begin_time": "201710221430",
     "description": "The talk will be about how important Python in the field of Machine Learning and Computer Vision, and what all it can be used for - from robotics to simple scripting.\n\nSiddharth will talk about computer vision and how Python plays a major role in the CV industry.",
     "duration": "50 minutes",
     "github": "https://github.com/sidkothiyal",
