@@ -66,6 +66,17 @@ def mupy2016():
         data = json.load(photos_data)
     return render_template('mupy2016.html', subtitle=" ", photos=data)
 
+@app.route(u'/mupy2017')
+def mupy2017_1():
+    return redirect(u'/\u03BCpy2017')
+
+@app.route(u'/\u03BCpy2017')
+def mupy2017():
+    data = []
+    with open('photos.json') as photos_data:
+        data = json.load(photos_data)
+    return render_template('mupy2016.html', subtitle=" ", photos=data)
+
 @app.route("/LUGM")
 def lugm():
     return redirect('http://lugm.xyz/')
@@ -466,4 +477,4 @@ def bad_request(e):
     return render_template('404.html', title="Bad request"), 400
 
 if __name__ == "__main__":
-    app.run(port = 3000, debug=True)
+    app.run(port = 8000, debug=True)
