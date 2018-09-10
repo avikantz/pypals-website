@@ -53,7 +53,7 @@ def repo():
 
 @app.route(u'/\u03BCpy')
 def mu_py():
-    return render_template('index.html', title="MUPy 2017", subtitle="MUPy")
+    return render_template('index.html', title="MUPy 2018", subtitle="MUPy")
 
 @app.route(u'/mupy2016')
 def mupy2016_1():
@@ -75,7 +75,7 @@ def mupy2017():
     data = []
     with open('photos.json') as photos_data:
         data = json.load(photos_data)
-    return render_template('mupy2016.html', subtitle=" ", photos=data)
+    return render_template('mupy2017.html', subtitle=" ", photos=data)
 
 @app.route("/LUGM")
 def lugm():
