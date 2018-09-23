@@ -46,7 +46,7 @@
 			background-image: url("images/close.svg");
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: 3em;
+			background-size: 1.2em;
 			height: 5em;
 			opacity: 0;
 			position: absolute;
@@ -56,7 +56,7 @@
 			z-index: 2;
 		}
 
-		.poptrox-popup .nav-previous,
+		/*.poptrox-popup .nav-previous,
 		.poptrox-popup .nav-next {
 			-moz-transition: opacity 0.2s ease-in-out;
 			-webkit-transition: opacity 0.2s ease-in-out;
@@ -74,7 +74,7 @@
 			top: 50%;
 			width: 6em;
 			z-index: 2;
-		}
+		}*/
 
 		.poptrox-popup .nav-previous {
 			-moz-transform: scaleX(-1);
