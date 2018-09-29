@@ -323,23 +323,30 @@ def add_reg(data, json = False):
 @app.route('/checkregistration/', methods=['POST'])
 def check_reg():
     data = request.get_json()
-    res = {}
-    collection = conn['pypals'].registrations
-    query = {}
-    options = []
-    options.append({'email': data['email']})
-    options.append({'college_id': data['college_id']})
-    query['$or'] = options
-    entries = list(collection.find(query))
-    if len(entries) == 0:
-        res['isRegistered'] = False
-        res['message'] = "User not registered."
+    if data is None:
+        data = dict(request.form)
+        for i,j in data.iteritems():
+            data[i] = data[i][0]
+        res = {}
+        collection = conn['pypals'].registrations
+        query = {}
+        options = []
+        options.append({'college_id': data['college_id']})
+        query['$or'] = options
+        entries = list(collection.find(query))
+        if len(entries) == 0:
+            res['isRegistered'] = False
+            res['message'] = "User not registered."
+        else:
+            res['isRegistered'] = True
+            res['message'] = "User already registered."
+        res['success'] = True
+        return jsonify(res)
     else:
-        res['isRegistered'] = True
-        res['message'] = "User already registered."
-    res['success'] = True
-    return jsonify(res)
-
+        res = {}
+        res['success'] = 'false'
+        res['error'] = 'invalid source'
+        return jsonify(res)
 
 @app.route('/getattendance', methods=['GET'])
 @app.route('/getattendance/', methods=['GET'])
