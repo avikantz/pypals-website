@@ -338,6 +338,7 @@ def check_reg():
             res['isRegistered'] = False
             res['message'] = "User not registered."
         else:
+            res['name'] = entries[0]['name']
             res['isRegistered'] = True
             res['message'] = "User already registered."
         res['success'] = True
