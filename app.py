@@ -30,11 +30,10 @@ class User(Document):
 class Attendance(Document):
     __collection__ = 'pypals'
     structure = {
-        'name': unicode,
         'college_id': unicode,
         'talks_attended': list
     }
-    required_fields = ['name', 'college_id', 'talks_attended']
+    required_fields = ['college_id', 'talks_attended']
     default_values = {'talks_attended': []}
     use_dot_notation = True
 
@@ -371,13 +370,16 @@ def attendance():
         else:
             return jsonify([])
 
-@app.route('/attendance', methods=['GET', 'POST'])
+@app.route('/attendance', methods=[ 'POST'])
+@app.route('/attendance/', methods=[ 'POST'])
 def post_attendance():
     if request.headers.get('PyPals-Authorization') != app_key:
         return "Unauthorised"
     data = request.get_json()
-    print('data: ' + str(data))
-    name = data['name']
+    if data is None:
+        data = dict(request.form)
+        for i,j in data.iteritems():
+            data[i] = data[i][0]
     college_id = data['college_id']
     eventid = data['eventid']
     registrations = conn['pypals'].registrations
@@ -385,9 +387,9 @@ def post_attendance():
     options = []
     options.append({'college_id':str(college_id)})
     query['$or'] = options
-    
+
     if len(list(registrations.find(query))) < 1:
-        return add_attendance(name, college_id, eventid)
+        return jsonify({"success": False, "message" : "unregistered"})
 
     talk_data = []
     with open('talk.json') as data_file:
@@ -403,7 +405,7 @@ def post_attendance():
     if talk_time is None:
         return jsonify({"success": False, "message" : "Invalid talk"})
     else:
-        return add_attendance(name, college_id, eventid)
+        return add_attendance(college_id, eventid)
         # curr_time = datetime.now()
         # curr_time = datetime.strptime("201610231336", "%Y%m%d%H%M") #For testing
         # Move this registration window to something in the middle of the talk, as decided.
@@ -414,7 +416,7 @@ def post_attendance():
         # elif diff > 300:
         #    return jsonify({"success":False, "message": "Sorry Bruh! You couldn't make it."})
         # else:
-        #    return add_attendance(name, college_id, eventid)
+        #    return add_attendance(college_id, eventid)
 
 @app.route('/android')
 @app.route('/android/')
@@ -444,15 +446,14 @@ def most_attendance():
             return jsonify(entries)
         return jsonify(entries[:count])
 
-def add_attendance(name, college_id, eventid):
+def add_attendance(college_id, eventid):
     collection = conn['pypals'].attendance
-    options = [{'name': name, 'college_id': college_id}]
+    options = [{'college_id': college_id}]
     query = {'$or': options}
     entries = list(collection.find(query))
 
     if len(entries) == 0:
         attend = collection.Attendance()
-        attend['name'] = name
         attend['college_id'] = college_id
         attend['talks_attended'] = [str(eventid)]
         attend.save()
