@@ -179,8 +179,9 @@ def talk():
         else:
             day2.append(dat)
 
-    talkdata = [{"day": "Day 1 (Oct 21, 2017)", "data": day1}, \
-    {"day": "Day 2 (Oct 22, 2017)", "data": day2}]
+    # talkdata = [{"day": "Day 1 (Oct 21, 2017)", "data": day1}, \
+    # {"day": "Day 2 (Oct 22, 2017)", "data": day2}]
+    talkdata = [{"day": "Oct 28, 2018", "data": day2}]
 
     return render_template("talk.html", talkdata=talkdata, \
         subtitle="Talks Schedule")
