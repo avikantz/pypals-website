@@ -15,7 +15,7 @@
     "type": "Track Two"
   },
   {
-    "about_speaker": "Shayantan is a third year student at MIT studying Electrical and Electronics and am interested in object detection , analysis and its various applications using Python3, Keras, TensorFlow , Pillow among others",
+    "about_speaker": "Shayantan is a third year student at MIT studying Electrical and Electronics and am interested in object detection , analysis and its various applications using Python3, Keras, TensorFlow , Pillow among others.",
     "begin_time": "201810281630",
     "description": "The talk will elaborate and demonstrate the use of Python3 with other packages like OpenCV via 3 distinct examples - \n\nSurveillance and motion detection with the Raspberry Pi, Python, OpenCV, and Dropbox \n\nReal-Time Face Recognition \n\nObject detection with deep learning and OpenCV",
     "duration": "35 minutes",
@@ -91,7 +91,7 @@
   },
   {
     "about_speaker": "Abhishek is presently working as Deep Learning Scientist at Predible Health.\n\nThey have build state of the art segmentation network for liver and tumour and vessel segmentations.\n\nHe has spoken at Shri Mata Vaishno Devi University at their SFD celebrations and will also be submitting a proposal at PyCon India.\n\nHe has been a constant contributor in the open source world and a regular attendee of PyCon and other conferences every year.",
-    "begin_time": "201810221200",
+    "begin_time": "201810281200",
     "description": "Coming up soon!",
     "duration": "50 minutes",
     "github": "https://github.com/vibrantabhi19",
