@@ -180,7 +180,7 @@
     "type": "Track One"
   },
   {
-    "begin_time": "201810281700",
+    "begin_time": "201810291700",
     "about_speaker": "Vinayak is a Natural Language Understanding researcher at UMass Amherst where he is a graduate student working towards a Masters degree. A proud alumnus of Manipal, Vinayak has worked on cutting-edge NLP research in academia at the Indian Institute of Science as well as in the industry at Samsung Research America & Lexalytics. His research interests include latent semantic frames, conversation agents and word sense induction which he is pursuing at the IESL lab at UMass. Vinayak has also collaborated and published with the human-computer interface group at Stanford and is an active member of the MIT Media Lab's innovation in medicine community in India. He has published multiple peer-reviewed papers and has an AI patent under review at the US PTO.",
     "description": "This talk will briefly introduce word embeddings that have become a standard representation in natural language processing. We will discuss the shortcomings of universal embeddings like word2vec and Glove and what new directions are being explored to overcome their disadvantages. The talk will give details about the new ELMo embedding model and give a general overview of how, when, and where should they be used in your NLP projects. Finally the talk will give a sneak peek into the work happening at UMass Amherst to overcome some of the problems encountered in the field.",
     "duration": "60 minutes",
