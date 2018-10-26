@@ -8,9 +8,12 @@ import requests
 
 app = Flask(__name__)
 
+with open('config.json') as f:
+    data = json.load(f)
+
 recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'
-recaptcha_key = '***REMOVED***'
-app_key = '***REMOVED***'
+recaptcha_key = data['secrets']['recaptcha_key']
+app_key = data['secrets']['app_key']
 
 class User(Document):
     __collection__ = 'pypals'
