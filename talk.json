@@ -1,7 +1,7 @@
 [
   {
     "about_speaker": "I am Siddarth Venkatraman, a second year CSE student. Last year, i joined Project Manas(the autonomous car student project), and since then AI has been what I've devoted most of my time towards. In the past year and a half, I have worked on various projects relating to ML. Some of these are road lane detection, object segmentation, image reconstruction and classification, sentiment analysis as well as small models made for various Kaggle competitions. I've also ventured briefly into research on ensemble deep learning, RL safety, and am currently working with faculty in MIT to build an automated Hypertension Retinopathy model. I truly believe that the hype train that ML has become is warranted, given it's limitless potential in both research and applications. As for myself however, I dedicate my time to ML simply because the very nature of the field makes it intensely satisfying and exciting.",
-    "begin_time": "201810281715",
+    "begin_time": "201810281545",
     "description": "The talk will start of with a brief overview of the main problem statements in the field of Natural Language processing. Then, the data representation of language which can be usable by ML models is discussed. Word embeddings, and how to build them or use pretrained embeddings in Python. Then, we will move on to Neural Networks and briefly talk about CNN models for NLP before diving into RNN's. LSTM and related memory cells will be briefly discussed, along with their implementation in Keras. Finally, we will go over the state of the art use of Reinforcement Learning for NLP which allows us to use non differentiable language metrics.",
     "duration": "35 minutes",
     "github": "https://github.com/HyperPotatoNeo",
@@ -16,7 +16,7 @@
   },
   {
     "about_speaker": "Shayantan is a third year student at MIT studying Electrical and Electronics and am interested in object detection , analysis and its various applications using Python3, Keras, TensorFlow , Pillow among others.",
-    "begin_time": "201810281630",
+    "begin_time": "201810281200",
     "description": "The talk will elaborate and demonstrate the use of Python3 with other packages like OpenCV via 3 distinct examples - \n\nSurveillance and motion detection with the Raspberry Pi, Python, OpenCV, and Dropbox \n\nReal-Time Face Recognition \n\nObject detection with deep learning and OpenCV",
     "duration": "35 minutes",
     "github": "https://github.com/",
@@ -31,7 +31,7 @@
   },
   {
     "about_speaker": "Siddhartha is a final year Computer Science student interested in Deep Learning research. He has collaborated with scientists at Google Brain to improve learning mechanisms of neural networks. He also worked with CERN as a Google Summer of Code 2018 student. He loves playing around with new ideas and is here to share.",
-    "begin_time": "201810281545",
+    "begin_time": "201810281400",
     "description": "Artificial intelligence is probably the fastest evolving field these days and it is so for a good reason. With applications ranging from Medical diagnosis to Quantum physics, AI is redefining the boundaries of computer science. The mathematical models that we use to understand the world around us are flawed and the learning algorithms are very brittle. Thanks to Python and a few frameworks, adoption of AI in the industry is prevalent. But, commercial usage without a proper understanding  of what's under the hood has  direct consequences and the outcome can get ugly. This talk would elaborate on what the problems with AI are and why we're far from the 'intelligence' part of AI.",
     "duration": "35 minutes",
     "github": "https://github.com/srk97",
@@ -46,7 +46,7 @@
   },
   {
     "about_speaker": "Coming up soon!",
-    "begin_time": "201810281015",
+    "begin_time": "201810281700",
     "description": "Coming up soon!",
     "duration": "35 minutes",
     "github": "https://github.com/",
