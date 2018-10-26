@@ -1,12 +1,12 @@
 [
   {
-    "about_speaker": "Siddarth is a second year CSE student and a member of the AI division at Project Manas.",
+    "about_speaker": "I am Siddarth Venkatraman, a second year CSE student. Last year, i joined Project Manas(the autonomous car student project), and since then AI has been what I've devoted most of my time towards. In the past year and a half, I have worked on various projects relating to ML. Some of these are road lane detection, object segmentation, image reconstruction and classification, sentiment analysis as well as small models made for various Kaggle competitions. I've also ventured briefly into research on ensemble deep learning, RL safety, and am currently working with faculty in MIT to build an automated Hypertension Retinopathy model. I truly believe that the hype train that ML has become is warranted, given it's limitless potential in both research and applications. As for myself however, I dedicate my time to ML simply because the very nature of the field makes it intensely satisfying and exciting.",
     "begin_time": "201810281715",
-    "description": "Siddarth will talk about what are word vectors, how are they made? What are Recurrent neural networks? LSTM and related cells. Types of nlp tasks(classification, summarization, sequence generation etc). Illustrate easy to make models on Tensorflow-Keras.",
+    "description": "The talk will start of with a brief overview of the main problem statements in the field of Natural Language processing. Then, the data representation of language which can be usable by ML models is discussed. Word embeddings, and how to build them or use pretrained embeddings in Python. Then, we will move on to Neural Networks and briefly talk about CNN models for NLP before diving into RNN's. LSTM and related memory cells will be briefly discussed, along with their implementation in Keras. Finally, we will go over the state of the art use of Reinforcement Learning for NLP which allows us to use non differentiable language metrics.",
     "duration": "35 minutes",
-    "github": "https://github.com/",
-    "image": "",
-    "linkedin": "",
+    "github": "https://github.com/HyperPotatoNeo",
+    "image": "https://preview.ibb.co/ketgMV/IMG-20181024-232533-Bokeh-01.jpg",
+    "linkedin": "https://www.linkedin.com/in/siddarth-venkatraman-59b863157/",
     "location": "NLH 405",
     "speaker": "Siddarth Venkatraman",
     "speaker_email": "",
