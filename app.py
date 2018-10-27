@@ -12,8 +12,8 @@ with open('config.json') as f:
     data = json.load(f)
 
 recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'
-recaptcha_key = data['secrets']['recaptcha_key']
-app_key = data['secrets']['app_key']
+recaptcha_key = str(data['secrets']['recaptcha_key'])
+app_key = str(data['secrets']['app_key'])
 
 class User(Document):
     __collection__ = 'pypals'
