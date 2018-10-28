@@ -150,13 +150,13 @@
     "type": "Track One"
   },
   {
-    "about_speaker": "Coming up soon!",
+    "about_speaker": "Sunil has a PhD  in Computer Science (NLP and ML Specialization) from Bharathiar University, Coimbatore. He is a AI researcher with about 15 years industry experience. Currently, he works in the capacity of a Sr. Lead Data Scientist with Fidelity Investments, Bangalore. He has published several research papers in Scopus, IEEE journals and is a frequent speaker in various reputed colleges in and around Bangalore. He is an avid coder and has won multiple hackathons. In his spare time, Sunil likes to teach, travel and be on top of learning new advancements in AI.",
     "begin_time": "201810281430",
-    "description": "Coming up soon!",
+    "description": "Often in a business environment when machine learning models are built, just reporting the performance measurements obtained to confirm the goodness of the model may not be enough. The stakeholders generally are inquisitive to understand the 'whys' of the model i.e. What are the factors contributing to the model's performance? In other words, the stakeholders want to understand the causes for the effects. Essentially, the expectation from the stakeholders is to understand the importance of various features in the model and the direction in which each of the variable impacts the model.",
     "duration": "60 minutes",
     "github": "https://github.com/",
-    "image": "",
-    "linkedin": "",
+    "image": "https://media.licdn.com/dms/image/C5103AQEjDR0kGlStDA/profile-displayphoto-shrink_800_800/0?e=1546473600&v=beta&t=-e-mudMqvNq6WijI23476buRZzHHzQlzknhVv7hAQQE",
+    "linkedin": "https://www.linkedin.com/in/sunilchinnamgari/",
     "location": "ICT Seminar Hall 2",
     "speaker": "Sunil Kumar",
     "speaker_email": "sunil_sixsigma@yahoo.com",
