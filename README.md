@@ -1,6 +1,8 @@
 # Pypals website
 All code related to the pypals official website, https://www.pypals.org/
 
+Old legacy heroku code
+
 
 ##Installation
 
