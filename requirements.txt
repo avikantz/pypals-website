@@ -1,2 +1,2 @@
-Flask-MongoKit
-pymongo==2.8
+Flask
+markupsafe

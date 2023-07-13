@@ -1,6 +1,0 @@
-{
-	"secrets": {
-		"app_key": "APP_KEY",
-		"recaptcha_key": "RECAPTCHA_KEY"
-	}
-}
